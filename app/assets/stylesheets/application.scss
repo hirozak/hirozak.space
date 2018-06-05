@@ -1,3 +1,11 @@
+// setup
+@import "./reset";
+@import "./mixin/typography";
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
+
+// styles
+@import "./modules/navbar";
+@import "./modules/footer";
+@import "./modules/top";

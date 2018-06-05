@@ -1,0 +1,46 @@
+@media(min-width: 992px) {
+  .container {
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+}
+
+@media(min-width: 768px) {
+  .top-header {
+    text-align: center;
+    &--image {
+      height: 170px;
+      width: 100%;
+    }
+  }
+  .top-menu {
+    background-color: white;
+    height: 70px;
+    border-bottom: 0.5px solid #cdcdcd;
+    &--list {
+      margin: 20px auto;
+      th:hover {
+        -webkit-transform: scale(1.3);
+        transform: scale(1.3);
+      }
+      a {
+        text-decoration: none;
+        color: #777;
+      }
+      &-item {
+        margin: 20px 50px;
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+@media(min-width: 0px) and (max-width : 767px) {
+  .top-header {
+    text-align: center;
+    &--image {
+      height: 70px;
+      width: 100%;
+    }
+  }
+}
