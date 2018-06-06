@@ -19,7 +19,6 @@
     </div>
   </div>
   <div class="container-fluid slider-container">
-    <div class="col-md-12">
       <div class="post-slider">
         <div class="post-slider--item"><p>test</p></div>
         <div class="post-slider--item"><p>test</p></div>
@@ -27,23 +26,22 @@
         <div class="post-slider--item"><p>test</p></div>
         <div class="post-slider--item"><p>test</p></div>
       </div>
-    </div>
   </div>
 </header>
 <div class="main-wrapper">
   <div class="container-fluid main-container">
-    <div class="row">
+    <div class="row posts-wrapper">
       <div class="posts">
-        <h2 class="main-title">New Posts</h2>
-        <div class="col-md-6">
+        <h2 class="main-title hidden-xs">New Posts</h2>
+        <div class="col-md-6 post-list">
           <div class="post-item">
-            <div class="col-md-4 col-sm-4 col-xs-4 post-item--side">
+            <div class="col-md-4 col-sm-4 col-xs-5 post-item--side">
               <%= link_to "#", class: "post-item--image" do %>
                 <%= image_tag 'post-image', class: "post-item--image__item" %>
               <% end %>
             </div>
-            <div class="col-md-8 col-sm-8 col-xs-8 post-item--main">
-              <h3 class="post-item--main_title">[Rails] render と redirect_to の違いとrenderメソッド内で@変数定義しなければいけない理由</h3>
+            <div class="col-md-8 col-sm-8 col-xs-7 post-item--main">
+              <h3 class="post-item--main_title">hirozak タイトルhirozak タイトルhirozak タイトルhirozak タイトルhirozak タイトル</h3>
               <div class="post-item--main_info">
                 <%= link_to "Travel", "#", class: "post-item--main_info__category" %>
                 <span class="post-item--main_info__date">
@@ -53,15 +51,15 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 post-list">
           <div class="post-item">
-            <div class="col-md-4 col-sm-4 col-xs-4 post-item--side">
+            <div class="col-md-4 col-sm-4 col-xs-5 post-item--side">
               <%= link_to "#", class: "post-item--image" do %>
                 <%= image_tag 'post-image', class: "post-item--image__item" %>
               <% end %>
             </div>
-            <div class="col-md-8 col-sm-8 col-xs-8 post-item--main">
-              <h3 class="post-item--main_title">リュックを新調！master-pieceのLui's別注リュックサック</h3>
+            <div class="col-md-8 col-sm-8 col-xs-7 post-item--main">
+              <h3 class="post-item--main_title">hirozak タイトル</h3>
               <div class="post-item--main_info">
                 <%= link_to "Travel", "#", class: "post-item--main_info__category" %>
                 <span class="post-item--main_info__date">
@@ -71,15 +69,15 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 post-list">
           <div class="post-item">
-            <div class="col-md-4 col-sm-4 col-xs-4 post-item--side">
+            <div class="col-md-4 col-sm-4 col-xs-5 post-item--side">
               <%= link_to "#", class: "post-item--image" do %>
                 <%= image_tag 'post-image', class: "post-item--image__item" %>
               <% end %>
             </div>
-            <div class="col-md-8 col-sm-8 col-xs-8 post-item--main">
-              <h3 class="post-item--main_title">Mid2016と迷った挙句MacBook Pro Retina 13 (Early2015) を購入。Airとの比較など。</h3>
+            <div class="col-md-8 col-sm-8 col-xs-7 post-item--main">
+              <h3 class="post-item--main_title">hirozak タイトル</h3>
               <div class="post-item--main_info">
                 <%= link_to "Travel", "#", class: "post-item--main_info__category" %>
                 <span class="post-item--main_info__date">
@@ -89,51 +87,15 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 post-list">
           <div class="post-item">
-            <div class="col-md-4 col-sm-4 col-xs-4 post-item--side">
+            <div class="col-md-4 col-sm-4 col-xs-5 post-item--side">
               <%= link_to "#", class: "post-item--image" do %>
                 <%= image_tag 'post-image', class: "post-item--image__item" %>
               <% end %>
             </div>
-            <div class="col-md-8 col-sm-8 col-xs-8 post-item--main">
-              <h3 class="post-item--main_title">[Rails] render と redirect_to の違いとrenderメソッド内で@変数定義しなければいけない理由</h3>
-              <div class="post-item--main_info">
-                <%= link_to "Travel", "#", class: "post-item--main_info__category" %>
-                <span class="post-item--main_info__date">
-                  2018/06/07
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="post-item">
-            <div class="col-md-4 col-sm-4 col-xs-4 post-item--side">
-              <%= link_to "#", class: "post-item--image" do %>
-                <%= image_tag 'post-image', class: "post-item--image__item" %>
-              <% end %>
-            </div>
-            <div class="col-md-8 col-sm-8 col-xs-8 post-item--main">
-              <h3 class="post-item--main_title">[Rails] render と redirect_to の違いとrenderメソッド内で@変数定義しなければいけない理由</h3>
-              <div class="post-item--main_info">
-                <%= link_to "Travel", "#", class: "post-item--main_info__category" %>
-                <span class="post-item--main_info__date">
-                  2018/06/07
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="post-item">
-            <div class="col-md-4 col-sm-4 col-xs-4 post-item--side">
-              <%= link_to "#", class: "post-item--image" do %>
-                <%= image_tag 'post-image', class: "post-item--image__item" %>
-              <% end %>
-            </div>
-            <div class="col-md-8 col-sm-8 col-xs-8 post-item--main">
-              <h3 class="post-item--main_title">[Rails] render と redirect_to の違いとrenderメソッド内で@変数定義しなければいけない理由</h3>
+            <div class="col-md-8 col-sm-8 col-xs-7 post-item--main">
+              <h3 class="post-item--main_title">hirozak タイトル</h3>
               <div class="post-item--main_info">
                 <%= link_to "Travel", "#", class: "post-item--main_info__category" %>
                 <span class="post-item--main_info__date">
@@ -144,6 +106,8 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="row">
       <div class="side">
         <h1 class="side-title">Side</h1>
       </div>
