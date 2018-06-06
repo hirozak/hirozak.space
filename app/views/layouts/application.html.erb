@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>hirozak</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application' %>
   </head>
 
   <body>
+  <div class="wrap">
     <% flash.each do |key, value| %>
       <% key = "info" if key == "notice" %>
       <% key = "danger"  if key == "alert" %>
-    <%= content_tag :div, value, class: "alert alert-#{key}" %>
-  <% end %>
+      <%= content_tag :div, value, class: "alert alert-#{key}" %>
+    <% end %>
     <%= yield %>
+  </div>
   </body>
 </html>

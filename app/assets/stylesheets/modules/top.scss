@@ -1,7 +1,16 @@
-@media(min-width: 992px) {
-  .container {
-    margin-left: 80px;
-    margin-right: 80px;
+.post-slider {
+  margin: 30px auto;
+  &--item {
+    display: block;
+    width: 250px;
+    p {
+      background: #3498db;
+      height: 150px;
+      color: #fff;
+      margin: 5px;
+      line-height: 150px;
+      text-align: center;
+    }
   }
 }
 
@@ -36,6 +45,9 @@
 }
 
 @media(min-width: 0px) and (max-width : 767px) {
+  .wrap {
+    overflow: hidden;
+  }
   .top-header {
     text-align: center;
     &--image {
