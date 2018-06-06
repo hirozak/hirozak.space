@@ -1,5 +1,4 @@
 .post-slider {
-  margin: 30px auto;
   &--item {
     display: block;
     width: 250px;
@@ -14,6 +13,20 @@
   }
 }
 
+.main-wrapper {
+  margin-top: 30px;
+  border-top: 0.5px solid #cdcdcd;
+}
+
+.main-title {
+  text-align: center;
+  margin-bottom: 30px;
+  color: black;
+}
+.side-title {
+  text-align: center;
+}
+
 @media(min-width: 768px) {
   .top-header {
     text-align: center;
@@ -24,13 +37,14 @@
   }
   .top-menu {
     background-color: white;
-    height: 70px;
     border-bottom: 0.5px solid #cdcdcd;
+    overflow-x: auto;
     &--list {
       margin: 20px auto;
       th:hover {
         -webkit-transform: scale(1.3);
         transform: scale(1.3);
+        border-bottom: 0.5px solid #dbdbdb;
       }
       a {
         text-decoration: none;
@@ -39,6 +53,69 @@
       &-item {
         margin: 20px 50px;
         font-size: 30px;
+      }
+    }
+  }
+  .slider-container {
+    margin-left: 40px;
+    margin-right: 40px;
+    .post-slider {
+      margin: 30px auto;
+    }
+  }
+  .main-container {
+    margin: 30px 80px;
+  }
+  .posts {
+    .post-item {
+      width: 100%;
+      margin: 5px;
+      display: inline-block;
+      padding: 25px 10px;
+      text-decoration :none;
+      box-shadow: 0px 1px 8px rgba(0,0,0,0.4);
+      transition: .3s;
+      &:hover {
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05);
+      }
+      &--side {
+        padding: 0;
+      }
+      &--image {
+        &__item {
+          height: 150px;
+          width: 100%;
+        }
+      }
+      &--main {
+        padding-right: 0;
+        height: 150px;
+        &_title {
+          font-weight: bold;
+          font-size: 18px;
+          line-height: 25px;
+          margin-top: 5px;
+        }
+        &_info {
+          width: 100%;
+          position: absolute;
+          top: 80%;
+          margin-left: 5px;
+          a {
+            text-decoration: none;
+            color: #303030;
+            font-weight: bold;
+            &:hover {
+              color: #777;
+            }
+          }
+          &__date {
+            position: absolute;
+            left: 65%;
+            color: #777;
+          }
+        }
       }
     }
   }
@@ -77,6 +154,13 @@
         font-size: 18px;
         line-height: 30px;
       }
+    }
+  }
+  .slider-container {
+    padding-left: 0px;
+    padding-right: 0px;
+    .post-slider {
+      margin: 15px auto;
     }
   }
 }
