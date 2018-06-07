@@ -19,7 +19,7 @@ gem 'bootstrap-sass', '~> 3.3.7'
 gem "font-awesome-rails"
 
 # optional
-# gem 'devise'
+gem 'devise'
 # gem 'carrierwave'
 # gem 'rmagick'
 
