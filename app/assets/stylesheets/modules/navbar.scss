@@ -12,11 +12,33 @@
     margin-right: 30px;
   }
 
+  #categoriesModalLabel {
+    text-align: center;
+    font-weight: bold;
+  }
+  .caterogry-list-modal {
+    &_item {
+      text-align: center;
+      margin: 10px auto;
+      a {
+        font-size: 20px;
+        color: #777;
+      }
+    }
+  }
+  .modal-footer {
+    text-align: center;
+    .btn {
+      width: 20%;
+      padding: 6px 12px;
+    }
+  }
+
   @media(min-width: 768px) {
     .top-title-link {
-      margin-left: 70%;
+      margin-left: 40%;
       font-weight: bold;
-      font-size: 30px;
+      font-size: 50px;
       padding: 30px;
       height: 80px;
       float: left;
@@ -26,6 +48,10 @@
       padding: 30px;
       height: 80px;
       font-size: 1.3em;
+      cursor: pointer;
+    }
+    .modal-body {
+      padding: 15px 100px;
     }
   }
 
@@ -43,11 +69,14 @@
         text-align: center;
         &-link {
           font-weight: bolder;
-          font-size: 2.3em;
+          font-size: 45px;
           line-height: 40px;
           margin-left: 60px;
         }
       }
+    }
+    .modal-body {
+      padding: 15px;
     }
   }
 }
