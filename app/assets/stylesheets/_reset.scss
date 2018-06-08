@@ -12,6 +12,12 @@ html{
     color:#000;
     background:#FFF;
 }
+
+@media(min-width: 768px) {
+  html {height:100%;}
+  body {height:100%;}
+  .wrap {height: 100%;}
+}
 /*
     TODO remove settings on BODY since we can't namespace it.
 */
