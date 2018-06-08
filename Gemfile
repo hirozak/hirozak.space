@@ -20,6 +20,7 @@ gem "font-awesome-rails"
 
 # optional
 gem 'devise'
+gem 'figaro'
 # gem 'carrierwave'
 # gem 'rmagick'
 
