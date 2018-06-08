@@ -175,6 +175,10 @@
       p {
         margin-bottom: 3px;
       }
+      &--link {
+        margin-top: 10px;
+        text-align: center;
+      }
     }
   }
 }
@@ -307,6 +311,7 @@
     &-info {
       padding-right: 0;
       &--name {
+        font-size: 21px;
         font-weight: bold;
         margin-top: 0;
         margin-bottom: 0;
@@ -318,7 +323,7 @@
         margin-top: 10px;
         p {
           margin-bottom: 2px;
-          font-size: 10px;
+          font-size: 13px;
         }
         .btn {
           margin-top: 10px;
@@ -338,6 +343,10 @@
     &-description {
       p {
         margin-bottom: 3px;
+      }
+      &--link {
+        margin-top: 10px;
+        text-align: center;
       }
     }
   }

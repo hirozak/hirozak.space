@@ -4,6 +4,11 @@
     font-weight: normal;
     text-decoration: none;
   }
+  span {
+    color: #2b2b2b;
+    font-weight: normal;
+    text-decoration: none;
+  }
 
   background-color: white;
   border-bottom: 0.5px solid #cdcdcd;
@@ -54,6 +59,9 @@
       padding: 15px 100px;
     }
   }
+  .navbar-toggle:focus {
+    background-color: white;
+  }
 
   @media(min-width: 0px) and (max-width : 767px) {
     .navbar-header {
@@ -61,6 +69,7 @@
       height: 70px;
       button {
         margin: 18px;
+        text-decoration: none;
       }
       .top-title {
         display: block;
