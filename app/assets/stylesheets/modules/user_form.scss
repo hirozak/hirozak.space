@@ -1,0 +1,30 @@
+.user-form {
+  .form-title {
+    text-align: center;
+    font-weight: bold;
+  }
+  label {
+    font-weight: normal;
+  }
+  .form-check-label {
+    font-weight: normal;
+  }
+  .btn {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    background-color: #0275d8;
+    border-color: #0275d8;
+  }
+  a {
+    margin-top: 30px;
+  }
+}
+
+@media(min-width: 768px) {
+  .user-form {
+    padding: 0 30px 20px;
+    margin-top: 40px;
+    border: 0.5px solid #cdcdcd;
+    border-radius: 10px;
+  }
+}

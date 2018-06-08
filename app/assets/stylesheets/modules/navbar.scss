@@ -1,3 +1,7 @@
+.alert {
+  text-align: center;
+  margin-bottom: 0;
+}
 .navbar-all {
   a {
     color: #2b2b2b;
@@ -54,6 +58,13 @@
       height: 80px;
       font-size: 1.3em;
       cursor: pointer;
+    }
+    .dropdown-menu {
+      left: 0;
+      a {
+        font-size: 1.3em;
+        padding: 8px 20px;
+      }
     }
     .modal-body {
       padding: 15px 100px;
