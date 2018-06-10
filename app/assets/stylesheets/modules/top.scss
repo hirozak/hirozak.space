@@ -89,7 +89,7 @@
       &--image {
         &__item {
           height: 150px;
-          width: 100%;
+          max-width: 100%;
         }
       }
       &--main {
@@ -123,10 +123,14 @@
       }
     }
   }
+  .sub-container {
+    margin: 30px 15%;
+  }
   .profile {
     &-title {
-      text-align: center;
+      // text-align: center;
       margin-top: 0;
+      margin-left: 25%;
       margin-bottom: 30px;
       color: black;
       font-size: 45px;
@@ -135,11 +139,11 @@
     &-image {
       text-align: center;
       &--item {
-        width: 100%;
+        max-width: 100%;
+        max-height: 210px;
       }
     }
     &-info {
-      padding-left: 5px;
       &--name {
         font-weight: bold;
         font-size: 24px;

@@ -1,11 +1,16 @@
+.admin-wrap {
+  height: 100%;
+}
 .admin {
-  height: calc(100% - 80px);
-}
-.admin-side {
-  background-color: skyblue;
-  height: 100%;
-}
-.admin-main {
-  background-color: gray;
-  height: 100%;
+  height: calc(100% - 80.5px);
+  &-side {
+    background-color: skyblue;
+    height: 100%;
+    overflow-x: hidden;
+  }
+  &-main {
+    background-color: gray;
+    height: 100%;
+    overflow-x: hidden;
+  }
 }
