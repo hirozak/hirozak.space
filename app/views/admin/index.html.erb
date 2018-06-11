@@ -6,7 +6,39 @@
   })
 </script>
 <div class="admin">
-    <div class="col-md-2 admin-side">
+  <div class="admin-side">
+    <div class="admin-side--menu">
+      <ul>
+        <li class="admin-side--menu_item">
+          <%= fa_icon "home" %><%= link_to 'hirozak', root_path, target: "_blank" %>
+        </li>
+        <li class="admin-side--menu_item">
+          <%= fa_icon "bar-chart" %><%= link_to "Dashboard", admin_index_path %>
+        </li>
+        <li class="admin-side--menu_item">
+          <%= fa_icon "pencil-square-o" %><%= link_to "New Post", "#" %>
+        </li>
+        <li class="admin-side--menu_item">
+          <%= fa_icon "file-code-o" %><%= link_to "All Posts", "#" %>
+        </li>
+        <li class="admin-side--menu_item__sub">
+          <%= link_to "- Published", "#" %>
+        </li>
+        <li class="admin-side--menu_item__sub">
+          <%= link_to "- Draft", "#" %>
+        </li>
+        <li class="admin-side--menu_item">
+          <%= fa_icon "tags" %><%= link_to "Category", "#" %>
+        </li>
+        <li class="admin-side--menu_item">
+          <%= fa_icon "hashtag" %><%= link_to "Tag", "#" %>
+        </li>
+        <li class="admin-side--menu_item">
+          <%= fa_icon "sign-out" %><%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+        </li>
+      </ul>
     </div>
-    <div class="col-md-10 admin-main"></div>
+  </div>
+  <div class="admin-main">
+  </div>
 </div>

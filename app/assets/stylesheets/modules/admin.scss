@@ -1,16 +1,61 @@
-.admin-wrap {
-  height: 100%;
-}
-.admin {
-  height: calc(100% - 80.5px);
-  &-side {
-    background-color: skyblue;
+@media(min-width: 768px) {
+  .admin-wrap {
     height: 100%;
-    overflow-x: hidden;
   }
-  &-main {
-    background-color: gray;
+  .admin {
     height: 100%;
-    overflow-x: hidden;
+    &-side {
+      background-color: white;
+      border-right: 0.5px solid #cdcdcd;
+      height: 100%;
+      overflow-x: hidden;
+      width: 200px;
+      float: left;
+      &--top {
+        padding: 15px 20px 0 45px;
+        a {
+          text-decoration: none;
+          color: black;
+          font-size: 22px;
+          font-weight: bold;
+          &:hover {
+            color: #707070;
+          }
+        }
+      }
+      &--menu {
+        padding-left: 20px;
+        i {
+          width: 22.5px;
+          text-align: center;
+          vertical-align: -5%;
+          font-size: 1.4em;
+        }
+        a {
+          margin-left: 10px;
+          text-decoration: none;
+          color: black;
+          font-size: 20px;
+          font-weight: bold;
+          &:hover {
+            color: #707070;
+          }
+        }
+        &_item {
+          margin-top: 25px;
+          &__sub {
+            margin-top: 10px;
+            margin-left: 40px;
+          }
+        }
+      }
+    }
+    &-main {
+      background-color: white;
+      height: 100%;
+      overflow-x: hidden;
+      float: left;
+      width: calc(100% - 200px);
+    }
   }
 }

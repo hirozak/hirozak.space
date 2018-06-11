@@ -16,7 +16,6 @@
       <% key = "danger"  if key == "alert" %>
       <%= content_tag :div, value, class: "alert alert-#{key}" %>
     <% end %>
-    <%= render 'shared/navbar' %>
     <%= yield %>
   </div>
   </body>

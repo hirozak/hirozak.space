@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
   devise_for :users
-  authenticated :user do
-    resources :admin, only: [:index]
-  end
+  resources :admin, only: %(index)
   root 'top#index'
 end
