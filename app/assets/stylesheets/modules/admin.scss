@@ -25,6 +25,9 @@
       }
       &--menu {
         padding-left: 20px;
+        ul {
+          padding-left: 0;
+        }
         i {
           width: 22.5px;
           text-align: center;

@@ -5,8 +5,33 @@
     $(".wrap").addClass("admin-wrap");
   })
 </script>
+<head>
+  <%= stylesheet_link_tag "markdown/uikit.min.css" %>
+  <%= javascript_include_tag 'markdown/uikit.min.js' %>
+
+  <!-- Codemirror and marked dependencies -->
+  <%= stylesheet_link_tag "markdown/codemirror.css" %>
+  <%= javascript_include_tag 'markdown/codemirror.js' %>
+  <%= javascript_include_tag 'markdown/markdown.js' %>
+  <%= javascript_include_tag 'markdown/overlay.js' %>
+  <%= javascript_include_tag 'markdown/xml.js' %>
+  <%= javascript_include_tag 'markdown/gfm.js' %>
+  <%= javascript_include_tag 'markdown/marked.js' %>
+
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- HTML editor CSS and JavaScript -->
+  <%= stylesheet_link_tag "markdown/htmleditor.css" %>
+  <%= javascript_include_tag 'markdown/htmleditor.js' %>
+</head>
 <div class="admin">
   <%= render 'shared/admin_side' %>
   <div class="admin-main">
+    <h2>記事を投稿</h2>
+    <%= form_for [:admin, @post] do |f| %>
+      <%= f.text_field :title, class: "form-control" %>
+      <textarea name="post[text]" data-uk-htmleditor="{markdown:true}"></textarea>
+      <%= f.submit :save %>
+    <% end %>
   </div>
 </div>
