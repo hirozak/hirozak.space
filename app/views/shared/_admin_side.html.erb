@@ -1,9 +1,9 @@
 <div class="admin-side">
+  <div class="admin-side--header">
+    <%= fa_icon "home" %><%= link_to 'hirozak', root_path, target: "_blank" %>
+  </div>
   <div class="admin-side--menu">
     <ul>
-      <li class="admin-side--menu_item">
-        <%= fa_icon "home" %><%= link_to 'hirozak', root_path, target: "_blank" %>
-      </li>
       <li class="admin-side--menu_item">
         <%= fa_icon "bar-chart" %><%= link_to "Dashboard", admin_index_path %>
       </li>
@@ -26,7 +26,7 @@
         <%= fa_icon "hashtag" %><%= link_to "Tag", "#" %>
       </li>
       <li class="admin-side--menu_item">
-        <%= fa_icon "sign-out" %><%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+        <%= fa_icon "sign-out" %><%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
       </li>
     </ul>
   </div>

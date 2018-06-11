@@ -1,0 +1,61 @@
+<script>
+  $(function() {
+    $("html").addClass("admin-wrap");
+    $("body").addClass("admin-wrap");
+    $(".wrap").addClass("admin-wrap");
+  })
+</script>
+<head>
+  <%= stylesheet_link_tag "markdown/uikit.min.css" %>
+  <%= javascript_include_tag 'markdown/uikit.min.js' %>
+
+  <!-- Codemirror and marked dependencies -->
+  <%= stylesheet_link_tag "markdown/codemirror.css" %>
+  <%= javascript_include_tag 'markdown/codemirror.js' %>
+  <%= javascript_include_tag 'markdown/markdown.js' %>
+  <%= javascript_include_tag 'markdown/overlay.js' %>
+  <%= javascript_include_tag 'markdown/xml.js' %>
+  <%= javascript_include_tag 'markdown/gfm.js' %>
+  <%= javascript_include_tag 'markdown/marked.js' %>
+
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- HTML editor CSS and JavaScript -->
+  <%= stylesheet_link_tag "markdown/htmleditor.css" %>
+  <%= javascript_include_tag 'markdown/htmleditor.js' %>
+</head>
+<div class="admin">
+  <%= render 'shared/admin_side' %>
+  <div class="admin-main">
+    <div class="admin-main--header">
+      <% if current_page?(action: :new) %>
+        <h2>Create Post</h2>
+      <% elsif current_page?(action: :edit) %>
+        <h2>Edit Post</h2>
+      <% end %>
+    </div>
+    <div class="admin-main--body">
+      <%= form_for [:admin, @post] do |f| %>
+        <div class="row new-post-form">
+          <div class="col-md-6">
+            <%= f.text_field :title, class: "form-control form-control-lg", placeholder: "Title", required: 'true' %>
+          </div>
+          <div class="col-md-2">
+            <% category_options = Category.order(:id).map { |c| [c.name, c.id] } %>
+            <%= f.select :category_id, category_options, {prompt:"Category"}, {required: 'true', autofocus: 'true', class: 'form-control'} %>
+          </div>
+          <div class="col-md-4">
+            <%= f.text_field :tag_list, value: @post.tag_list.join(','), class: "form-control", placeholder: "Tags (separated by commas)", required: 'true' %>
+          </div>
+        </div>
+        <div class="new-post-form_confirm">
+          <%= f.check_box 'published',{}, "true", "false" %>
+             Publish
+          <%= f.submit :Save, class:"btn btn-primary" %>
+        </div>
+        <textarea name="post[text]" data-uk-htmleditor="{markdown:true}"><%= @post.text if @post.text %></textarea>
+
+      <% end %>
+    </div>
+  </div>
+</div>

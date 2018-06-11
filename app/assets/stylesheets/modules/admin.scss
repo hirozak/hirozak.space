@@ -11,14 +11,23 @@
       overflow-x: hidden;
       width: 200px;
       float: left;
-      &--top {
-        padding: 15px 20px 0 45px;
+      &--header {
+        padding: 15px 20px;
+        border-bottom: 0.5px solid #cdcdcd;
+        i {
+          width: 22.5px;
+          text-align: center;
+          vertical-align: -5%;
+          font-size: 1.4em;
+        }
         a {
+          margin-left: 10px;
           text-decoration: none;
           color: black;
-          font-size: 22px;
+          font-size: 20px;
           font-weight: bold;
           &:hover {
+            text-decoration: none;
             color: #707070;
           }
         }
@@ -41,6 +50,7 @@
           font-size: 20px;
           font-weight: bold;
           &:hover {
+            text-decoration: none;
             color: #707070;
           }
         }
@@ -48,7 +58,7 @@
           margin-top: 25px;
           &__sub {
             margin-top: 10px;
-            margin-left: 40px;
+            margin-left: 25px;
           }
         }
       }
@@ -56,9 +66,44 @@
     &-main {
       background-color: white;
       height: 100%;
-      overflow-x: hidden;
+      overflow-x: auto;
       float: left;
       width: calc(100% - 200px);
+      &--header {
+        border-bottom: 0.5px solid #cdcdcd;
+        h2 {
+          margin: 15px;
+          line-height: 28px;
+        }
+      }
+      &--body {
+        margin: 15px;
+        height: calc(100% - 90.5px);
+
+        // post#new --start
+        .new-post-form {
+          margin-bottom: 10px;
+          &_confirm {
+            float: right;
+            margin-bottom: 10px;
+            .btn {
+              margin-left: 20px;
+              font-weight: 400;
+            }
+          }
+        }
+        .uk-htmleditor {
+          clear: both;
+          &-code {
+            min-height: 510px;
+          }
+          &-preview {
+            min-height: 510px;
+          }
+        }
+
+        // post#new --end //
+      }
     }
   }
 }

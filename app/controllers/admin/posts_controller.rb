@@ -11,14 +11,32 @@ class Admin::PostsController < ApplicationController
 
   def create
     @post = current_user.posts.new(post_params)
-    @post.category_id = 1
-    @post.save!
+    if @post.save
+      redirect_to edit_admin_post_path(@post), notice: "記事を投稿しました。"
+    else
+      flash.alert = "投稿に失敗しました。"
+      render :new
+    end
+  end
+
+  def edit
+    @post = Post.find(params[:id])
+  end
+
+  def update
+    @post = Post.find(params[:id])
+    if @post.update(post_params)
+      redirect_to edit_admin_post_path(@post), notice: "記事を更新しました。"
+    else
+      flash.alert = "記事の更新に失敗しました。"
+      render :edit
+    end
   end
 
   private
 
   def post_params
-    params.require(:post).permit(:title, :text, :image)
+    params.require(:post).permit(:title, :text, :image, :published, :category_id, :tag_list)
   end
 
   def admin_user?

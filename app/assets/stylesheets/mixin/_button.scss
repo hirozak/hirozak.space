@@ -16,6 +16,15 @@
   background-color: #ffeeee;
 }
 
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  &:hover {
+    background-color: #0275d8;
+    border-color: #0275d8;
+  }
+}
+
 .icon {
   &-sns {
     text-decoration: none;

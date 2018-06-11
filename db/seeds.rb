@@ -1,1 +1,6 @@
-
+Category.create!(name: "Life")
+Category.create!(name: "Tech")
+Category.create!(name: "Gadgets")
+Category.create!(name: "Music")
+Category.create!(name: "Movie")
+Category.create!(name: "Column")
