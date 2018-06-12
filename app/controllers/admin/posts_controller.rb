@@ -3,6 +3,7 @@ class Admin::PostsController < ApplicationController
   before_action :admin_user?
 
   def index
+    @posts = current_user.posts
   end
 
   def new

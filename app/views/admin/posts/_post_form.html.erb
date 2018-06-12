@@ -6,23 +6,23 @@
   })
 </script>
 <head>
-  <%= stylesheet_link_tag "markdown/uikit.min.css" %>
-  <%= javascript_include_tag 'markdown/uikit.min.js' %>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.27.5/css/uikit.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.27.5/js/uikit.min.js"></script>
 
   <!-- Codemirror and marked dependencies -->
-  <%= stylesheet_link_tag "markdown/codemirror.css" %>
-  <%= javascript_include_tag 'markdown/codemirror.js' %>
-  <%= javascript_include_tag 'markdown/markdown.js' %>
-  <%= javascript_include_tag 'markdown/overlay.js' %>
-  <%= javascript_include_tag 'markdown/xml.js' %>
-  <%= javascript_include_tag 'markdown/gfm.js' %>
-  <%= javascript_include_tag 'markdown/marked.js' %>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.38.0/codemirror.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.38.0/codemirror.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.38.0/mode/markdown/markdown.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.38.0/addon/mode/overlay.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.38.0/mode/xml/xml.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.38.0/mode/gfm/gfm.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.5/marked.js'></script>
 
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
   <!-- HTML editor CSS and JavaScript -->
-  <%= stylesheet_link_tag "markdown/htmleditor.css" %>
-  <%= javascript_include_tag 'markdown/htmleditor.js' %>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.27.5/css/components/htmleditor.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.27.5/js/components/htmleditor.js"></script>
 </head>
 <div class="admin">
   <%= render 'shared/admin_side' %>
