@@ -129,10 +129,17 @@
               color: #ff3d3d;
             }
           }
-        }
-        .post-item:hover {
-          cursor: pointer;
-          background-color: #f9f9f9;
+          .post-item:hover {
+            cursor: pointer;
+            background-color: #f9f9f9;
+          }
+          .pagination {
+            border-top: 1.8px solid #cdcdcd;
+            display: block;
+            border-radius: 0;
+            margin: 0;
+            padding: 20px 0;
+          }
         }
         // post#all,published,drafts --end//
       }

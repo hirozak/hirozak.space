@@ -22,6 +22,7 @@ gem "font-awesome-rails"
 gem 'devise'
 gem 'figaro'
 gem 'acts-as-taggable-on'
+gem 'kaminari'
 # gem 'carrierwave'
 # gem 'rmagick'
 
