@@ -11,13 +11,13 @@
         <%= fa_icon "pencil-square-o" %><%= link_to "New Post", new_admin_post_path %>
       </li>
       <li class="admin-side--menu_item">
-        <%= fa_icon "file-code-o" %><%= link_to "All Posts", admin_posts_path %>
+        <%= fa_icon "file-code-o" %><%= link_to "All Posts", all_admin_posts_path %>
       </li>
       <li class="admin-side--menu_item__sub">
-        <%= link_to "- Published", "#" %>
+        <%= link_to "- Published", published_admin_posts_path %>
       </li>
       <li class="admin-side--menu_item__sub">
-        <%= link_to "- Draft", "#" %>
+        <%= link_to "- Drafts", drafts_admin_posts_path %>
       </li>
       <li class="admin-side--menu_item">
         <%= fa_icon "tags" %><%= link_to "Category", "#" %>

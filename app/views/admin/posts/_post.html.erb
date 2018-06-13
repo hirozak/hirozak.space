@@ -1,0 +1,9 @@
+<tr data-href="<%= edit_admin_post_path(post) %>" class="post-item">
+  <td class="post-data"><%= post.id %></td>
+  <td class="post-data"><%= truncate(post.title, length: 15) %></td>
+  <td class="post-data"><%= truncate(post.text, length: 30) %></td>
+  <td class="post-data"><%= post.category.name %></td>
+  <td class="post-data"><%= status(post) %></td>
+  <td class="post-data"><%= post.created_at.to_s(:date) %></td>
+  <td class="post-data post-delete"><%= link_to admin_post_path(post), method: :delete, data: {confirm: "Are You Sure to Delete?"} do %><%= fa_icon 'times' %><% end %></td>
+</tr>

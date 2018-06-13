@@ -82,7 +82,7 @@
         margin: 15px;
         height: calc(100% - 90.5px);
 
-        // post#new --start
+        // posts#new --start
         .new-post-form {
           margin-bottom: 10px;
           &_confirm {
@@ -103,8 +103,38 @@
             min-height: 510px;
           }
         }
+        // posts#new --end //
 
-        // post#new --end //
+        // post#all,published,drafts --start
+        &_posts {
+          border: 1px solid #cdcdcd;
+          border-radius: 10px;
+          .post-head {
+            padding: 10px 10px 10px 18px;
+          }
+          .post-data {
+            padding: 10px 10px 10px 20px;
+          }
+          th {
+            font-weight: bold;
+          }
+          button{
+            width: 87.5px;
+            padding: 1px 7px;
+          }
+          td {
+            font-weight: bold;
+            a {
+              padding-left: 15px;
+              color: #ff3d3d;
+            }
+          }
+        }
+        .post-item:hover {
+          cursor: pointer;
+          background-color: #f9f9f9;
+        }
+        // post#all,published,drafts --end//
       }
     }
   }

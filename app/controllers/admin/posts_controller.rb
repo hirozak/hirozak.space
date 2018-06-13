@@ -2,10 +2,6 @@ class Admin::PostsController < ApplicationController
   before_action :authenticate_user!
   before_action :admin_user?
 
-  def index
-    @posts = current_user.posts
-  end
-
   def new
     @post = current_user.posts.new
   end
@@ -32,6 +28,29 @@ class Admin::PostsController < ApplicationController
       flash.alert = "記事の更新に失敗しました。"
       render :edit
     end
+  end
+
+  def destroy
+    post = Post.find(params[:id])
+    if post.destroy
+      flash[:notice] = "削除しました。"
+      redirect_back(fallback_location: all_admin_posts_path)
+    else
+      flash.alert = "削除できませんでした。"
+      redirect_back(fallback_location: all_admin_posts_path)
+    end
+  end
+
+  def all
+    @posts = current_user.posts.default_order
+  end
+
+  def published
+    @posts = current_user.posts.published.default_order
+  end
+
+  def drafts
+    @posts = current_user.posts.drafts.default_order
   end
 
   private

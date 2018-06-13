@@ -24,6 +24,24 @@
     border-color: #0275d8;
   }
 }
+.btn-danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  &:hover {
+    background-color: #d9534f;
+    border-color: #d9534f;
+  }
+}
+.btn-secondary {
+  color: #fff;
+  background-color: #6c757d;
+  border-color: #6c757d;
+  &:hover {
+    color: #fff;
+    background-color: #565d63;
+    border-color: #565d63;
+  }
+}
 
 .icon {
   &-sns {
