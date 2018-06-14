@@ -20,11 +20,11 @@
         <%= link_to "- Drafts", drafts_admin_posts_path %>
       </li>
       <li class="admin-side--menu_item">
-        <%= fa_icon "tags" %><%= link_to "Category", "#" %>
+        <%= fa_icon "tags" %><%= link_to "Category", admin_categories_path %>
       </li>
-      <li class="admin-side--menu_item">
+      <!-- <li class="admin-side--menu_item">
         <%= fa_icon "hashtag" %><%= link_to "Tag", "#" %>
-      </li>
+      </li> -->
       <li class="admin-side--menu_item">
         <%= fa_icon "sign-out" %><%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
       </li>

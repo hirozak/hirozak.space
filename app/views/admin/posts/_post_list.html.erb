@@ -9,14 +9,7 @@
   <%= render 'shared/admin_side' %>
   <div class="admin-main">
     <div class="admin-main--header">
-
-      <% if current_page?(action: :all) %>
-        <h2>All Posts</h2>
-      <% elsif current_page?(action: :published) %>
-        <h2>Published Posts</h2>
-      <% elsif current_page?(action: :drafts) %>
-        <h2>Draft Posts</h2>
-      <% end %>
+      <h2><%= title %></h2>
     </div>
     <div class="admin-main--body">
       <div class="panel panel-default admin-main--body_posts">
@@ -33,7 +26,15 @@
             </tr>
           </thead>
           <tbody>
-            <%= render @posts %>
+            <% if @posts.any? %>
+              <%= render @posts %>
+            <% else %>
+            <tr data-href="#" class="post-item">
+              <td class="post-data"></td>
+              <td class="post-data"></td>
+              <td class="post-data">ポストはまだありません。</td>
+            </tr>
+            <% end %>
           </tbody>
         </table>
         <div class="posts-pagination">
