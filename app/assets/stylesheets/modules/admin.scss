@@ -139,6 +139,34 @@
             border-radius: 0;
             margin: 0;
             padding: 10px 0;
+            text-align: center;
+            a {
+              color: #777;
+            }
+            span {
+              color: #777;
+            }
+            .page {
+              width: 27px;
+              // border: 1px solid #cdcdcd;
+              padding: 3px 6px 3px 8px;
+              margin: 0 1px;
+              a {
+                font-size: 15px;
+                line-height: 25px;
+              }
+              span {
+                font-size: 15px;
+              }
+            }
+            &-arrow {
+              width: 20px;
+              a {
+                width: 20px;
+                line-height: 20px;
+                font-size: 1.4em;
+              }
+            }
           }
         }
         // post#all,published,drafts --end//
