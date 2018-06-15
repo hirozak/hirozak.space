@@ -19,3 +19,77 @@
     </div>
   </div>
 </header>
+<div class="post-wrapper">
+  <div class="container-fluid main-container">
+    <div class="row">
+      <div class="col-md-9">
+        <div class="post">
+          <div class="post-date">
+            <%= @post.created_at.to_s(:published_on) %>
+          </div>
+          <h2 class="post-title"><%= @post.title %></h2>
+          <div class="post-info">
+            <div class="post-info--category">
+              <%= fa_icon "home" %> <%= link_to "Home", root_path %> / <%= link_to @post.category.name, "#" %>
+            </div>
+            <div class="post-info--tags">
+              <% @post.tag_list.each do |tag| %>
+                <div class="tag"><%= tag %></div>
+              <% end %>
+            </div>
+          </div>
+          <div class="post-text">
+            <%= md_to_html(@post.text) %>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="side-bar">
+          <h4>人気の投稿</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="sub-wrapper">
+  <div class="container-fluid sub-container">
+    <div class="row sub">
+      <div class="col-md-8 col-xs-12 profile">
+        <h2 class="profile-title">About Me</h2>
+        <div class="col-md-5 col-sm-5 col-xs-5 profile-image">
+          <%= image_tag 'profile-image', class: "profile-image--item" %>
+        </div>
+        <div class="col-md-7 col-sm-7 col-xs-7 profile-info">
+          <p class="profile-info--name">hirozak</p>
+          <div class="profile-info--link">
+            <%= link_to "https://twitter.com/xringoxr", {class: "profile-info--sns icon-sns icon-twitter", target: "_blank"} do %>
+              <%= fa_icon "twitter 2x" %>
+            <% end %>
+            <%= link_to "https://www.instagram.com/hirozak/", {class: "profile-info--sns icon-sns icon-instagram", target: "_blank"} do %>
+              <%= fa_icon "instagram 2x" %>
+            <% end %>
+            <%= link_to "https://github.com/hirozak", {class: "profile-info--sns icon-sns icon-github", target: "_blank"} do %>
+              <%= fa_icon "github 2x" %>
+            <% end %>
+          </div>
+          <div class="profile-info--description">
+            <p>大学4年生(Now) → ITエンジニア</p>
+            <p class="hidden-xs">音楽, 映画, 海外ドラマ, ガジェット, インテリア, お酒が好きです。</p>
+            <%= link_to "詳しく見る", "#", class: "btn btn-outline-default btn-round" %>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-xs-12 this_blog">
+        <h2 class="this_blog-title">This Blog</h2>
+        <div class="this_blog-description">
+          <p>このブログはhirozakがRuby on Railsで開発、管理、運用を行っています。</p>
+          <p>GitHubにて、ソースコードを公開しています。</p>
+          <div class="this_blog-description--link">
+            <%= fa_icon "github lg" %> <%= link_to "リンクはこちら", "https://github.com/hirozak/hirozak", target: "_blank" %> <%= fa_icon "github lg" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<%= render 'shared/footer' %>

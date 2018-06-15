@@ -41,7 +41,7 @@
       }
       &-item {
         margin: 20px 50px;
-        font-size: 30px;
+        font-size: 28px;
       }
     }
   }
@@ -123,6 +123,70 @@
       }
     }
   }
+  .post-wrapper {
+    border-bottom: 0.5px solid #cdcdcd;
+  }
+  .post {
+    &-date {
+      margin-left: 5px;
+      color: #777;
+    }
+    &-title {
+      margin-bottom: 15px;
+      color: black;
+      // font-weight: bold;
+    }
+    &-info {
+      margin-left: 5px;
+      &--category {
+        font-size: 17px;
+        float: left;
+        color: #999;
+        a {
+          font-size: 17px;
+          color: #777;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+      &--tags {
+        float: right;
+        margin-right: 50px;
+        .tag {
+          font-size: 15px;
+          color: #777;
+          padding: 2px 10px;
+          margin: 0 1px;
+          border: 0.5px solid #cdcdcd;
+          border-radius: 3px;
+          display: inline;
+        }
+      }
+    }
+    &-text {
+      clear: both;
+      padding: 30px 10px 10px;
+      h2 {
+        margin-top: 10px;
+        margin-bottom: 20px;
+      }
+      p {
+        font-size: 15px;
+      }
+      blockquote {
+        strong {
+          font-size: 17px;
+        }
+      }
+    }
+  }
+  .side-bar {
+    h4 {
+      text-align: center;
+      font-weight: bold;
+    }
+  }
   .sub-container {
     margin: 30px 15%;
   }
@@ -156,7 +220,8 @@
       &--description {
         margin-top: 10px;
         p {
-          font-size: 15px;
+          letter-spacing: 0px;
+          font-size: 14px;
           margin-bottom: 2px;
         }
         .btn {
@@ -177,6 +242,8 @@
     }
     &-description {
       p {
+        letter-spacing: 0px;
+        font-size: 14px;
         margin-bottom: 3px;
       }
       &--link {
