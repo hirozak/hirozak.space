@@ -1,0 +1,30 @@
+<header>
+  <%= render 'shared/navbar' %>
+  <div class="top-header">
+    <%= image_tag 'top-header', class: "top-header--image hidden-xs" %>
+    <%= image_tag 'top-header-xs', class: "top-header--image visible-xs" %>
+  </div>
+  <div class="top-menu">
+    <div class="container-fluid">
+      <table class="top-menu--list">
+        <tr>
+          <th><%= link_to "All", "#", class: "top-menu--list-item" %></th>
+          <th><%= link_to "Life", "#", class: "top-menu--list-item" %></th>
+          <th><%= link_to "Gadget", "#", class: "top-menu--list-item" %></th>
+          <th><%= link_to "Tech", "#", class: "top-menu--list-item" %></th>
+          <th><%= link_to "Music", "#", class: "top-menu--list-item" %></th>
+          <th><%= link_to "About&nbsp;Me".html_safe, "#", class: "top-menu--list-item" %></th>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="container-fluid slider-container">
+      <div class="post-slider">
+        <div class="post-slider--item"><p>test</p></div>
+        <div class="post-slider--item"><p>test</p></div>
+        <div class="post-slider--item"><p>test</p></div>
+        <div class="post-slider--item"><p>test</p></div>
+        <div class="post-slider--item"><p>test</p></div>
+      </div>
+  </div>
+</header>

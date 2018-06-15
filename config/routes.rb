@@ -8,4 +8,5 @@ Rails.application.routes.draw do
     resources :categories, only: %i(index show create)
   end
   root 'top#index'
+  resources :posts, only: %i(index show)
 end
