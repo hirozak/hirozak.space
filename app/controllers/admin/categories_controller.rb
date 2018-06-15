@@ -9,7 +9,7 @@ class Admin::CategoriesController < ApplicationController
 
   def show
     @category = Category.find_by(name: params[:id])
-    @posts = @category.posts.default_order.page(params[:page]).per(12)
+    @posts = @category.posts.includes(:category).default_order.page(params[:page]).per(12)
   end
 
   def create
