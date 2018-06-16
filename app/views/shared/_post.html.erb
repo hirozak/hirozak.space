@@ -1,0 +1,18 @@
+<div class="col-md-6 post-list">
+  <div class="post-item">
+    <div class="col-md-4 col-sm-4 col-xs-5 post-item--side">
+      <%= link_to post, class: "post-item--image" do %>
+        <%= image_tag 'post-image', class: "post-item--image__item" %>
+      <% end %>
+    </div>
+    <div class="col-md-8 col-sm-8 col-xs-7 post-item--main">
+      <h3 class="post-item--main_title"><%= link_to post.title, post %></h3>
+      <div class="post-item--main_info">
+        <%= link_to "Travel", "#", class: "post-item--main_info__category" %>
+        <span class="post-item--main_info__date">
+          2018/06/07
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

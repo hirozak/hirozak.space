@@ -96,10 +96,14 @@
         padding-right: 0;
         height: 150px;
         &_title {
-          font-weight: bold;
-          font-size: 20px;
-          line-height: 25px;
           margin-top: 5px;
+          a {
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 25px;
+            color: black;
+            text-decoration: none;
+          }
         }
         &_info {
           width: 100%;
