@@ -17,4 +17,12 @@ class Post < ApplicationRecord
   def to_param
     slug
   end
+
+  def previous
+    Post.published.default_order.where('created_at <= ? and id < ?', created_at, id).first
+  end
+
+  def next
+    Post.published.default_order.where('created_at >= ? and id > ?', created_at, id).reverse.first
+  end
 end
