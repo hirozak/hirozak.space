@@ -19,6 +19,7 @@ module Admin::PostsHelper
       autolink:           true,
       no_intra_emphasis:  true,
       fenced_code_blocks: true,
+      space_after_headers:true,
       highlight:          true,
     }
 

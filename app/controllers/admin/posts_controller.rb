@@ -17,11 +17,11 @@ class Admin::PostsController < ApplicationController
   end
 
   def edit
-    @post = Post.find(params[:id])
+    @post = Post.find_by(slug: params[:id])
   end
 
   def update
-    @post = Post.find(params[:id])
+    @post = Post.find_by(slug: params[:id])
     if @post.update(post_params)
       redirect_to edit_admin_post_path(@post), notice: "記事を更新しました。"
     else
@@ -31,7 +31,7 @@ class Admin::PostsController < ApplicationController
   end
 
   def destroy
-    post = Post.find(params[:id])
+    post = Post.find_by(slug: params[:id])
     if post.destroy
       flash[:notice] = "削除しました。"
       redirect_back(fallback_location: all_admin_posts_path)
@@ -56,7 +56,7 @@ class Admin::PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :text, :image, :published, :category_id, :tag_list)
+    params.require(:post).permit(:title, :text, :image, :published, :category_id, :tag_list, :slug)
   end
 
   def admin_user?

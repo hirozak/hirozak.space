@@ -105,8 +105,17 @@
         .new-post-form {
           margin-bottom: 10px;
           &_confirm {
+            min-width: 500px;
             float: right;
             margin-bottom: 10px;
+            &__slug {
+              padding-right: 0;
+            }
+            &__button {
+              padding-left: 0;
+              padding-right: 0;
+              text-align: center;
+            }
             .btn {
               margin-left: 20px;
               font-weight: 400;

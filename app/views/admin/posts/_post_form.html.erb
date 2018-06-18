@@ -49,9 +49,14 @@
           </div>
         </div>
         <div class="new-post-form_confirm">
-          <%= f.check_box 'published',{}, "Published", "Draft" %>
-             Publish
-          <%= f.submit :Save, class:"btn btn-primary" %>
+          <div class="col-md-7 new-post-form_confirm__slug">
+            <%= f.text_field :slug, class: "form-control form-control", placeholder: "set URL posts/xxx", required: 'true' %>
+          </div>
+          <div class="col-md-5 new-post-form_confirm__button">
+            <%= f.check_box 'published',{}, "Published", "Draft" %>
+               Publish
+            <%= f.submit :Save, class:"btn btn-primary" %>
+          </div>
         </div>
         <textarea name="post[text]" data-uk-htmleditor="{markdown:true}"><%= @post.text if @post.text %></textarea>
 

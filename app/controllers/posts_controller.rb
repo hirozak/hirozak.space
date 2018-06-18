@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
+    @post = Post.find_by(slug: params[:id])
     redirect_to root_path if @post.Draft?
   end
 
