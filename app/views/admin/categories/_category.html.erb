@@ -1,5 +1,5 @@
 <div class="col-md-4 category">
   <%= link_to admin_category_path(category) do %>
-    <h2><%= category.name %></h2>
+    <h2><%= category.name %>(<%= category.posts.count %>)</h2>
   <% end %>
 </div>

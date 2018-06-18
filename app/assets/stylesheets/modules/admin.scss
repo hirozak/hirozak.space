@@ -106,7 +106,6 @@
           margin-bottom: 10px;
           &_confirm {
             min-width: 500px;
-            float: right;
             margin-bottom: 10px;
             &__slug {
               padding-right: 0;
@@ -115,6 +114,14 @@
               padding-left: 0;
               padding-right: 0;
               text-align: center;
+              &-published {
+                display: inline;
+                margin: auto 5px;
+              }
+              &-favorite {
+                display: inline;
+                margin: auto 5px;
+              }
             }
             .btn {
               margin-left: 20px;

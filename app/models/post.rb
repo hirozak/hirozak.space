@@ -12,6 +12,7 @@ class Post < ApplicationRecord
   scope :default_order, -> { order("created_at desc") }
   scope :published, -> { where(published: true) }
   scope :drafts, -> { where(published: false) }
+  scope :favorite, -> { where(favorite: true) }
 
   def to_param
     slug

@@ -48,13 +48,20 @@
             <%= f.text_field :tag_list, value: @post.tag_list.join(','), class: "form-control", placeholder: "Tags (separated by commas)", required: 'true' %>
           </div>
         </div>
-        <div class="new-post-form_confirm">
-          <div class="col-md-7 new-post-form_confirm__slug">
+        <div class="row new-post-form_confirm">
+          <div class="col-md-6"></div>
+          <div class="col-md-3 col-sm-3 new-post-form_confirm__slug">
             <%= f.text_field :slug, class: "form-control form-control", placeholder: "set URL posts/xxx", required: 'true' %>
           </div>
-          <div class="col-md-5 new-post-form_confirm__button">
-            <%= f.check_box 'published',{}, "Published", "Draft" %>
-               Publish
+          <div class="col-md-3 col-sm-3 new-post-form_confirm__button">
+            <div class="new-post-form_confirm__button-published">
+              <%= f.check_box 'published',{}, "Published", "Draft" %>
+                 Publish
+            </div>
+            <div class="new-post-form_confirm__button-favorite">
+              <%= f.check_box 'favorite',{}, true, false %>
+                 Favorite
+            </div>
             <%= f.submit :Save, class:"btn btn-primary" %>
           </div>
         </div>
