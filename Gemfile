@@ -24,6 +24,8 @@ gem 'figaro'
 gem 'acts-as-taggable-on'
 gem 'kaminari'
 gem 'redcarpet'
+gem 'carrierwave'
+gem 'rmagick'
 # gem 'carrierwave'
 # gem 'rmagick'
 

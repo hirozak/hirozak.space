@@ -7,6 +7,8 @@ class Post < ApplicationRecord
   validates :category_id, presence: true
   validates :text, presence: true
 
+  mount_uploader :image, ImageUploader
+
   enum published: {Draft: false, Published: true}
 
   scope :default_order, -> { order("created_at desc") }

@@ -35,7 +35,7 @@
       <% end %>
     </div>
     <div class="admin-main--body">
-      <%= form_for [:admin, @post] do |f| %>
+      <%= form_for [:admin, @post], html: { multipart: true } do |f| %>
         <div class="row new-post-form">
           <div class="col-md-6">
             <%= f.text_field :title, class: "form-control form-control-lg", placeholder: "Title", required: 'true' %>
@@ -49,7 +49,11 @@
           </div>
         </div>
         <div class="row new-post-form_confirm">
-          <div class="col-md-6"></div>
+          <div class="col-md-4"></div>
+          <div class="col-md-2">
+            <%= f.label :image %>
+            <%= f.file_field :image %>
+          </div>
           <div class="col-md-3 col-sm-3 new-post-form_confirm__slug">
             <%= f.text_field :slug, class: "form-control form-control", placeholder: "set URL posts/xxx", required: 'true' %>
           </div>
