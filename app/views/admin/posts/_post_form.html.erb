@@ -49,10 +49,18 @@
           </div>
         </div>
         <div class="row new-post-form_confirm">
-          <div class="col-md-3"></div>
-          <div class="col-md-3">
-            <%= f.file_field :image %>
+
+          <div class="col-md-1">
+            <%= f.label :image, class:"new-post-form_confirm__label" do %>
+              <%= f.file_field :image, style: "display:none;" %>
+              <% if @post.image? %>
+                <%= image_tag @post.image.url(:thumb_mini), class:"new-post-form_confirm__image" %>
+              <% else %>
+                <%= fa_icon "image 2x" %>
+              <% end %>
+            <% end %>
           </div>
+          <div class="col-md-5"></div>
           <div class="col-md-3 col-sm-3 new-post-form_confirm__slug">
             <%= f.text_field :slug, class: "form-control form-control", placeholder: "set URL posts/xxx", required: 'true' %>
           </div>

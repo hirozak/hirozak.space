@@ -8,7 +8,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   end
 
   version :thumb_mini do
-   process :resize_to_fill => [98, 70]
+   process :resize_to_fill => [225, 150]
   end
 
   def store_dir

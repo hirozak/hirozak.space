@@ -1,5 +1,5 @@
 <tr data-href="<%= edit_admin_post_path(post) %>" class="post-item">
-  <td class="post-data"><%= post.id %></td>
+  <td class="post-data"><%= image_tag post.image.url(:thumb_mini), class: "post-item-image" %></td>
   <td class="post-data"><%= truncate(post.title, length: 15) %></td>
   <td class="post-data"><%= truncate(post.text, length: 30) %></td>
   <td class="post-data"><%= post.category.name %></td>

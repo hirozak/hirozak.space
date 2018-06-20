@@ -4,6 +4,9 @@
     margin: 0 2.5px;
     a {
       outline: none;
+      &:hover {
+        text-decoration: none;
+      }
     }
     &_image {
       height: 150px;

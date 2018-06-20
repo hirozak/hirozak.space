@@ -107,6 +107,14 @@
           &_confirm {
             min-width: 500px;
             margin-bottom: 10px;
+            &__label {
+              &:hover {
+                cursor: pointer;
+              }
+            }
+            &__image {
+              width: 100%;
+            }
             &__slug {
               padding-right: 0;
             }
@@ -145,10 +153,11 @@
           border: 1px solid #cdcdcd;
           border-radius: 10px;
           .post-head {
-            padding: 10px 10px 10px 18px;
+            padding: 5px 10px 5px 18px;
           }
           .post-data {
             padding: 10px 10px 10px 20px;
+            vertical-align: middle;
           }
           th {
             font-weight: bold;
@@ -163,6 +172,9 @@
               padding-left: 15px;
               color: #ff3d3d;
             }
+          }
+          .post-item-image {
+            width: 75px;
           }
           .post-item:hover {
             cursor: pointer;
