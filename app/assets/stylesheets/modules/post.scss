@@ -10,7 +10,7 @@
     &-title {
       margin-bottom: 15px;
       color: black;
-      font-weight: bolder;
+      font-weight: bold;
     }
     &-info {
       margin-left: 5px;
@@ -90,12 +90,47 @@
       }
     }
   }
+  .sticky {
+    position: sticky;
+    position: -webkit-sticky; /* Safari */
+    top: 0;
+  }
   .side-bar {
     margin-top: 50px;
+    margin-left: 10px;
     clear: both;
-    h4 {
+    .side-title {
       text-align: center;
       font-weight: bold;
+      font-size: 27px;
+    }
+    &--posts {
+    }
+    &--post {
+      margin: 20px 0;
+      &_index {
+        font-size: 1.1em;
+        font-weight: bold;
+        margin-bottom: -5px;
+      }
+      &-item {
+        margin-left: 20px;
+        &--side {
+          padding-left: 0;
+          padding-right: 0;
+          &_image {
+            width: 100%;
+          }
+        }
+        &--main {
+          padding-left: 10px;
+          &_title {
+            font-weight: 600;
+            font-size: 0.85em;
+            color: #777;
+          }
+        }
+      }
     }
   }
 

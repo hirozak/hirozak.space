@@ -36,9 +36,12 @@
           </div>
         </div>
       </div>
-      <div class="col-md-3">
+      <div class="col-md-3 sticky">
         <div class="side-bar">
-          <h4>Popular Posts</h4>
+          <div class="side-bar--posts">
+            <h2 class="side-title">Popular Posts</h2>
+            <%= render partial: 'shared/post_side', collection: @popular_posts, as: :post_side%>
+          </div>
         </div>
       </div>
     </div>
