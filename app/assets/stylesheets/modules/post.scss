@@ -59,8 +59,8 @@
     }
   }
   .previous_next {
-    clear: both;
-    margin-top: 20px;
+    @include clearfix();
+    margin-top: 10px;
     .next {
       margin-left: 50px;
       float: left;
@@ -90,6 +90,35 @@
       }
     }
   }
+  .similar-posts {
+    padding-top: 20px;
+    margin-top: 20px;
+    border-top: 0.5px solid #cdcdcd;
+    &--title {
+      text-align: center;
+      margin-bottom: 20px;
+      color: black;
+      font-weight: bold;
+    }
+    .similar-post {
+      @include hover();
+      a {
+        outline: none;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+      &--image {
+        width: 100%;
+      }
+      &--title {
+        margin-top: 5px;
+        font-weight: 600;
+        font-size: 0.85em;
+        color: #777;
+      }
+    }
+  }
   .sticky {
     position: sticky;
     position: -webkit-sticky; /* Safari */
@@ -109,6 +138,7 @@
     }
     &--post {
       margin: 20px 0;
+      @include hover();
       &_index {
         font-size: 1.1em;
         font-weight: bold;

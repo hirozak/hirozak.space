@@ -6,6 +6,8 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
+@import "./mixin/clearfix";
+@import "./mixin/hover_white";
 
 // styles
 @import "./mixin/button";

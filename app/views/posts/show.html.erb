@@ -35,6 +35,10 @@
             <span><%= previous_post(@post.previous) %> &rsaquo;</span>
           </div>
         </div>
+        <div class="row similar-posts">
+          <h4 class="similar-posts--title">You Might Also Like</h4>
+          <%= render partial: 'similar_post', collection: @similar_posts, as: :similar_post %>
+        </div>
       </div>
       <div class="col-md-3 sticky">
         <div class="side-bar">

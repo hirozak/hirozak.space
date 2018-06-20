@@ -1,5 +1,6 @@
 .post-slider {
   &--item {
+    @include hover();
     display: block;
     margin: 0 2.5px;
     a {
@@ -97,6 +98,7 @@
         &__item {
           height: 150px;
           max-width: 100%;
+          @include hover();
         }
       }
       &--main {
@@ -256,14 +258,14 @@
   }
   .posts {
     .post-list {
+      @include hover_mobile();
       padding: 0;
-      border-bottom: 0.5px solid #cdcdcd;
+      border-bottom: 0.1px solid #cdcdcd;
     }
     .post-item {
       width: 100%;
-      margin: 5px;
       display: inline-block;
-      padding: 15px 0px;
+      padding: 15px 5px;
       text-decoration :none;
       transition: .3s;
       &--side {
@@ -271,6 +273,7 @@
       }
       &--image {
         &__item {
+          @include hover();
           width: 100%;
         }
       }
@@ -281,6 +284,7 @@
         &_title {
           margin-top: 0px;
           a {
+            @include hover();
             font-weight: bold;
             font-size: 15px;
             line-height: 22px;
@@ -297,9 +301,7 @@
             text-decoration: none;
             color: #303030;
             font-weight: bold;
-            &:hover {
-              color: #777;
-            }
+            @include hover();
           }
           &__date {
             position: absolute;

@@ -1,0 +1,8 @@
+<div class="col-md-3 similar-post" ontouchstart="">
+  <%= link_to similar_post do %>
+    <%= image_tag similar_post.image.url(:thumb_mini), class:"similar-post--image" %>
+    <div class="similar-post--title">
+      <%= similar_post.title %>
+    </div>
+  <% end %>
+</div>
