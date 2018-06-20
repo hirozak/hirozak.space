@@ -22,7 +22,6 @@ class Admin::PostsController < ApplicationController
 
   def update
     @post = Post.find_by(slug: params[:id])
-    binding.pry
     if @post.update(post_params)
       redirect_to edit_admin_post_path(@post), notice: "記事を更新しました。"
     else

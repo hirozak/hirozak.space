@@ -26,8 +26,6 @@ gem 'kaminari'
 gem 'redcarpet'
 gem 'carrierwave'
 gem 'rmagick'
-# gem 'carrierwave'
-# gem 'rmagick'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

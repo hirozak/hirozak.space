@@ -1,14 +1,18 @@
 .post-slider {
   &--item {
     display: block;
-    width: 250px;
-    p {
-      background: #3498db;
+    margin: 0 2.5px;
+    a {
+      outline: none;
+    }
+    &_image {
       height: 150px;
-      color: #fff;
-      margin: 5px;
-      line-height: 150px;
-      text-align: center;
+    }
+    &_title {
+      max-width: 210px;
+      font-weight: 600;
+      font-size: 0.85em;
+      color: #777;
     }
   }
 }
