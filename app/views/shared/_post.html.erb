@@ -1,18 +1,20 @@
 <div class="col-md-6 post-list" ontouchstart="">
   <div class="post-item">
-    <div class="col-md-5 col-sm-5 col-xs-5 post-item--side">
-      <%= link_to post, class: "post-item--image" do %>
-        <%= image_tag post.image.url(:thumb), class: "post-item--image__item" %>
-      <% end %>
-    </div>
-    <div class="col-md-7 col-sm-7 col-xs-7 post-item--main">
-      <h3 class="post-item--main_title"><%= link_to post.title, post %></h3>
-      <div class="post-item--main_info">
-        <%= link_to post.category.name, "#", class: "post-item--main_info__category" %>
-        <span class="post-item--main_info__date">
-          <%= post.created_at.to_s(:published_on) %>
-        </span>
+    <%= link_to post do %>
+      <div class="col-md-5 col-sm-5 col-xs-5 post-item--side">
+        <div class="post-item--image">
+          <%= image_tag post.image.url(:thumb), class: "post-item--image__item" %>
+        </div>
       </div>
-    </div>
+      <div class="col-md-7 col-sm-7 col-xs-7 post-item--main">
+        <h3 class="post-item--main_title"><%= link_to post.title, post %></h3>
+        <div class="post-item--main_info">
+          <%= link_to post.category.name, "#", class: "post-item--main_info__category" %>
+          <span class="post-item--main_info__date">
+            <%= post.created_at.to_s(:published_on) %>
+          </span>
+        </div>
+      </div>
+    <% end %>
   </div>
 </div>

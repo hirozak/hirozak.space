@@ -9,7 +9,9 @@
       <div class="col-md-9">
         <div class="post">
           <div class="post-date">
-            <%= @post.created_at.to_s(:published_on) %>
+            <div class="post-date-published">
+              <%= @post.created_at.to_s(:published_on) %>
+            </div>
           </div>
           <h2 class="post-title"><%= @post.title %></h2>
           <div class="post-info">
@@ -36,15 +38,15 @@
           </div>
         </div>
         <div class="row similar-posts">
-          <h4 class="similar-posts--title">You Might Also Like</h4>
+          <h4 class="similar-posts--title">You Might Like</h4>
           <%= render partial: 'similar_post', collection: @similar_posts, as: :similar_post %>
         </div>
       </div>
-      <div class="col-md-3 sticky">
+      <div class="col-md-3 sticky bottom-xs">
         <div class="side-bar">
           <div class="side-bar--posts">
             <h2 class="side-title">Popular Posts</h2>
-            <%= render partial: 'shared/post_side', collection: @popular_posts, as: :post_side%>
+            <%= render partial: 'popular_post', collection: @popular_posts, as: :popular_post%>
           </div>
         </div>
       </div>

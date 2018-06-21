@@ -8,6 +8,7 @@
       color: #777;
     }
     &-title {
+      margin-top: 15px;
       margin-bottom: 15px;
       color: black;
       font-weight: bold;
@@ -55,6 +56,10 @@
         strong {
           font-size: 17px;
         }
+      }
+      ul {
+        margin-left: 3%;
+        list-style: disc;
       }
     }
   }
@@ -164,5 +169,200 @@
       }
     }
   }
+}
 
+@media(min-width: 0px) and (max-width: 767px) {
+  .post-wrapper {
+    margin-top: 10px;
+  }
+  .post {
+    &-date {
+      color: #777;
+      margin-left: 5px;
+      // @include clearfix();
+      // &-published {
+      //   margin-right: 20px;
+      //   display: block;
+      //   float: right;
+      // }
+    }
+    &-title {
+      margin-top: 15px;
+      margin-bottom: 15px;
+      color: black;
+      font-weight: bold;
+    }
+    &-info {
+      margin-left: 5px;
+      &--category {
+        font-size: 17px;
+        float: left;
+        color: #777;
+        a {
+          font-weight: 500;
+          font-size: 17px;
+          color: #777;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+      &--tags {
+        float: right;
+        .tag {
+          font-size: 15px;
+          color: #777;
+          padding: 2px 10px;
+          margin: 0 1px;
+          border: 0.5px solid #cdcdcd;
+          border-radius: 3px;
+          display: inline;
+        }
+      }
+    }
+    &-text {
+      clear: both;
+      padding: 35px 10px 10px;
+      p {
+        font-size: 17px;
+      }
+      blockquote {
+        strong {
+          font-size: 17px;
+        }
+      }
+      ul {
+        margin-left: 7%;
+        list-style: disc;
+      }
+    }
+  }
+  .previous_next {
+    @include clearfix();
+    margin-top: 10px;
+    .next {
+      float: left;
+      color: #999;
+      span {
+        font-size: 2em;
+      }
+      a {
+        font-size: 15px;
+        vertical-align: middle;
+        color: #777;
+        text-decoration: none;
+        &:active {
+          color: #555;
+        }
+      }
+    }
+    .previous {
+      float: right;
+      color: #999;
+      span {
+        font-size: 2em;
+      }
+      a {
+        font-size: 15px;
+        vertical-align: middle;
+        color: #777;
+        text-decoration: none;
+        &:active {
+          color: #555;
+        }
+      }
+    }
+  }
+  .similar-posts {
+    padding: 10px;
+    margin-top: 20px;
+    border-top: 0.5px solid #cdcdcd;
+    border-bottom: 0.5px solid #cdcdcd;
+    &--title {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 33px;
+      font-weight: bold;
+      color: black;
+    }
+    .similar-post {
+      padding: 0 5px 10px 5px;
+      @include hover();
+      a {
+        outline: none;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+      &--image {
+        width: 100%;
+      }
+      &--title {
+        margin-top: 5px;
+        font-weight: 600;
+        font-size: 0.85em;
+        color: #777;
+      }
+    }
+  }
+  .bottom-xs {
+    padding: 0;
+  }
+  .side-bar {
+    .side-title {
+      color: black;
+      text-align: center;
+      font-weight: bold;
+      font-size: 35px;
+      margin-bottom: 5px;
+    }
+    &--post {
+      @include hover_mobile();
+      border-bottom: 0.1px solid #cdcdcd;
+      padding: 15px 5px;
+      &-item {
+        margin: 0;
+        width: 100%;
+        display: inline-block;
+        &--side {
+          padding: 0;
+          &_image {
+            @include hover();
+            width: 100%;
+          }
+        }
+        &--main {
+          padding-left: 5px;
+          padding-right: 10px;
+          height: 100px;
+          &_title {
+            margin-top: 5px;
+            @include hover();
+            font-weight: bold;
+            font-size: 15px;
+            line-height: 22px;
+            color: black;
+            text-decoration: none;
+          }
+          &_info {
+            width: 100%;
+            margin-left: 5px;
+            position: absolute;
+            top: 80%;
+            a {
+              text-decoration: none;
+              color: #303030;
+              font-weight: bold;
+              @include hover();
+            }
+            &__date {
+              position: absolute;
+              left: 50%;
+              color: #777;
+            }
+          }
+        }
+      }
+    }
+  }
 }

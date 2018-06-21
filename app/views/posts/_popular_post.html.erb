@@ -1,0 +1,21 @@
+<div class="side-bar--post">
+  <div class="side-bar--post_index hidden-xs"><%= popular_post_counter + 1 %></div>
+  <div class="row side-bar--post-item" ontouchstart="">
+    <%= link_to popular_post do %>
+      <div class="col-md-5 col-xs-5 side-bar--post-item--side">
+        <%= image_tag popular_post.image.url(:thumb_mini), class: "side-bar--post-item--side_image" %>
+      </div>
+      <div class="col-md-7 col-xs-7 side-bar--post-item--main">
+        <div class="side-bar--post-item--main_title">
+          <%= popular_post.title %>
+        </div>
+        <div class="side-bar--post-item--main_info visible-xs">
+          <%= link_to popular_post.category.name, "#", class: "side-bar--post-item--main_info__category" %>
+          <span class="side-bar--post-item--main_info__date">
+            <%= popular_post.created_at.to_s(:published_on) %>
+          </span>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
