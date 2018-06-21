@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
+
   resources :admin, only: %i(index)
   namespace :admin do
     resources :posts, only: %i(new create edit update destroy) do
@@ -7,6 +8,10 @@ Rails.application.routes.draw do
     end
     resources :categories, only: %i(index show create)
   end
+
   root 'top#index'
   resources :posts, only: %i(index show)
+  resources :all, only: %i(index)
+  resources :categories, only: %i(index show)
+
 end

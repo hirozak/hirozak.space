@@ -39,33 +39,11 @@
           </div>
           <div class="modal-body category-list-modal">
             <div class="row">
-              <div class="col-md-4 col-xs-4 caterogry-list-modal_item">
-                <%= link_to "Life", "https://github.com/hirozak" %>
-              </div>
-              <div class="col-md-4 col-xs-4 caterogry-list-modal_item">
-                <%= link_to "Life", "#" %>
-              </div>
-              <div class="col-md-4 col-xs-4 caterogry-list-modal_item">
-                <%= link_to "Life", "#" %>
-              </div>
-              <div class="col-md-4 col-xs-4 caterogry-list-modal_item">
-                <%= link_to "Life", "#" %>
-              </div>
-              <div class="col-md-4 col-xs-4 caterogry-list-modal_item">
-                <%= link_to "Life", "#" %>
-              </div>
-              <div class="col-md-4 col-xs-4 caterogry-list-modal_item">
-                <%= link_to "Life", "#" %>
-              </div>
-              <div class="col-md-4 col-xs-4 caterogry-list-modal_item">
-                <%= link_to "Life", "#" %>
-              </div>
-              <div class="col-md-4 col-xs-4 caterogry-list-modal_item">
-                <%= link_to "Life", "#" %>
-              </div>
-              <div class="col-md-4 col-xs-4 caterogry-list-modal_item">
-                <%= link_to "Life", "#" %>
-              </div>
+              <% Category.all.each do |category| %>
+                <div class="col-md-4 col-xs-4 caterogry-list-modal_item">
+                  <%= link_to category.name, category %>
+                </div>
+              <% end %>
             </div>
           </div>
           <div class="modal-footer">

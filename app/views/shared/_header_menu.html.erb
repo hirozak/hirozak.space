@@ -2,11 +2,11 @@
   <div class="container-fluid">
     <table class="top-menu--list">
       <tr>
-        <th><%= link_to "All", "#", class: "top-menu--list-item" %></th>
-        <th><%= link_to "Life", "#", class: "top-menu--list-item" %></th>
-        <th><%= link_to "Gadget", "#", class: "top-menu--list-item" %></th>
-        <th><%= link_to "Tech", "#", class: "top-menu--list-item" %></th>
-        <th><%= link_to "Music", "#", class: "top-menu--list-item" %></th>
+        <th><%= link_to "All", all_index_path, class: "top-menu--list-item" %></th>
+        <th><%= link_to "Life", category_path("Life"), class: "top-menu--list-item" %></th>
+        <th><%= link_to "Gadgets", category_path("Gadgets"), class: "top-menu--list-item" %></th>
+        <th><%= link_to "Tech", category_path("tech"), class: "top-menu--list-item" %></th>
+        <th><%= link_to "Music", category_path("Music"), class: "top-menu--list-item" %></th>
         <th><%= link_to "About&nbsp;Me".html_safe, "#", class: "top-menu--list-item" %></th>
       </tr>
     </table>

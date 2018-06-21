@@ -1,0 +1,38 @@
+<header>
+  <%= render 'shared/navbar' %>
+  <%= render 'shared/header_image' %>
+  <%= render 'shared/header_menu' %>
+  <% if @posts.favorite.count > 3 %>
+  <div class="container-fluid slider-container">
+    <div class="post-slider">
+      <% @posts.favorite.each do |slide_post| %>
+        <div class="post-slider--item">
+          <%= link_to slide_post do %>
+            <%= image_tag slide_post.image.url(:thumb), class:"post-slider--item_image" %>
+            <div class="post-slider--item_title">
+              <%= slide_post.title %>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <% end %>
+</header>
+<div class="main-wrapper">
+  <div class="container-fluid main-container">
+    <div class="row posts-wrapper">
+      <div class="posts">
+        <h2 class="main-title"><%= main_title %></h2>
+        <div class="posts-all">
+          <%= render partial: 'shared/post', collection: @posts %>
+        </div>
+        <div class="posts-pagination">
+          <%= paginate @posts %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<%= render 'shared/sub_content' %>
+<%= render 'shared/footer' %>
