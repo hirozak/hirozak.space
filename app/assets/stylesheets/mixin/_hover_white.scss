@@ -11,7 +11,7 @@
 }
 
 @mixin hover_mobile() {
-  &:hover {
+  &:active {
     background-color: #eeeeee;
     cursor:pointer;
     filter: alpha(opacity=90);        /* ie lt 8 */
