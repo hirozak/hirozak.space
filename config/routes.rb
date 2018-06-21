@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   root 'top#index'
   resources :posts, only: %i(index show)
   resources :all, only: %i(index)
-  resources :categories, only: %i(index show)
+  resources :categories, only: %i(show)
+  resources :tags, only: %i(index show)
 
 end

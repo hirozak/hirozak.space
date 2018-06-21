@@ -2,10 +2,9 @@
   <%= render 'shared/navbar' %>
   <%= render 'shared/header_image' %>
   <%= render 'shared/header_menu' %>
-  <% if @posts.favorite.count > 3 %>
   <div class="container-fluid slider-container">
     <div class="post-slider">
-      <% @posts.favorite.each do |slide_post| %>
+      <% @slider_posts.each do |slide_post| %>
         <div class="post-slider--item">
           <%= link_to slide_post do %>
             <%= image_tag slide_post.image.url(:thumb), class:"post-slider--item_image" %>
@@ -17,7 +16,6 @@
       <% end %>
     </div>
   </div>
-  <% end %>
 </header>
 <div class="main-wrapper">
   <div class="container-fluid main-container">

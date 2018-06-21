@@ -172,6 +172,24 @@
         }
       }
     }
+    .tags {
+      text-align: center;
+      .tag {
+        display: inline-block;
+        padding: 2px 12px;
+        margin: 3px;
+        border: 0.5px solid #cdcdcd;
+        border-radius: 5px;
+        a {
+          font-size: 20px;
+          color: #777;
+          @include hover();
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
   }
   .sub-container {
     margin: 30px 15%;
@@ -382,6 +400,24 @@
           width: 20px;
           line-height: 20px;
           font-size: 1.4em;
+        }
+      }
+    }
+    .tags {
+      text-align: center;
+      .tag {
+        display: inline-block;
+        padding: 2px 12px;
+        margin: 3px;
+        border: 0.5px solid #cdcdcd;
+        border-radius: 5px;
+        a {
+          font-size: 20px;
+          color: #777;
+          @include hover();
+          &:hover {
+            text-decoration: none;
+          }
         }
       }
     }

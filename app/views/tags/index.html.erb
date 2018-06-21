@@ -20,16 +20,11 @@
 <div class="main-wrapper">
   <div class="container-fluid main-container">
     <div class="row posts-wrapper">
-      <div class="posts">
-        <h2 class="main-title">New Posts</h2>
-        <%= render partial: 'shared/post', collection: @posts %>
-      </div>
-    </div>
-
-    <div class="row posts-wrapper">
-      <div class="posts">
-        <h2 class="main-title">Popular Posts</h2>
-        <%= render partial: 'shared/post', collection: @popular_posts %>
+      <div class="posts col-md-6 col-md-offset-3">
+        <h2 class="main-title">Tags</h2>
+        <div class="tags">
+          <%= render partial: 'tag', collection: @tags %>
+        </div>
       </div>
     </div>
   </div>

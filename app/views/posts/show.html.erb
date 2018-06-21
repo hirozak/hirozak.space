@@ -16,11 +16,11 @@
           <h2 class="post-title"><%= @post.title %></h2>
           <div class="post-info">
             <div class="post-info--category">
-              <%= fa_icon "home" %> <%= link_to "Home", root_path %> / <%= link_to @post.category.name, "#" %>
+              <%= fa_icon "home" %> <%= link_to "Home", root_path %> / <%= link_to @post.category.name, @post.category %>
             </div>
             <div class="post-info--tags">
-              <% @post.tag_list.each do |tag| %>
-                <div class="tag">#<%= tag %></div>
+              <% @post.tags.each do |tag| %>
+                <div class="tag"><%= link_to "##{tag.name}", "../tags/#{tag.name}" %></div>
               <% end %>
             </div>
           </div>
