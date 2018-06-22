@@ -135,6 +135,34 @@
               margin-left: 20px;
               font-weight: 400;
             }
+            .fa-box {
+              vertical-align: middle;
+              text-align: center;
+              &:hover {
+                cursor: pointer;
+              }
+            }
+            #imageUpload {
+              .upload-dialog {
+                width: 70vw;
+                margin: 50px auto;
+              }
+              .modal-header {
+                .modal-title {
+                  text-align: center;
+                }
+              }
+              .modal-body {
+              }
+              .modal-footer {
+                text-align: center;
+                .btn {
+                  outline: none;
+                  width: 20%;
+                  padding: 6px 12px;
+                }
+              }
+            }
           }
         }
         .uk-htmleditor {

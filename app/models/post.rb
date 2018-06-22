@@ -2,7 +2,7 @@ class Post < ApplicationRecord
   belongs_to :user
   belongs_to :category
 
-  has_many :photos
+  has_many :photos, dependent: :destroy
   acts_as_taggable
 
   validates :title, presence: true
