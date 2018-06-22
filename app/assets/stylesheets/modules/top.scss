@@ -322,6 +322,7 @@
           margin-top: 0px;
           a {
             @include active_text();
+            text-decoration: none;
             font-weight: bold;
             font-size: 15px;
             line-height: 22px;
