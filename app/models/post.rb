@@ -1,6 +1,8 @@
 class Post < ApplicationRecord
   belongs_to :user
   belongs_to :category
+
+  has_many :photos
   acts_as_taggable
 
   validates :title, presence: true
