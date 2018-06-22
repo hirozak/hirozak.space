@@ -1,0 +1,26 @@
+#backgroundimage {
+  background-image: url(backgroundimage.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+  height: 100vh;
+  position: relative;
+}
+.coming-soon {
+  position: relative;
+  top: 40%;
+  bottom: 0;
+  &-text {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+  }
+}
+
+@media(min-width: 768px) {
+  .coming-soon {
+    &-text {
+      font-size: 66px;
+    }
+  }
+}

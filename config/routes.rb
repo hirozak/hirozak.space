@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'about_me/index'
+
   devise_for :users
 
   resources :admin, only: %i(index)
@@ -14,5 +16,6 @@ Rails.application.routes.draw do
   resources :all, only: %i(index)
   resources :categories, only: %i(show)
   resources :tags, only: %i(index show)
+  resources :about_me, only: %i(index)
 
 end
