@@ -217,8 +217,9 @@
       &--tags {
         float: right;
         .tag {
+          @include active_text();
           display: inline-block;
-          margin: 2px;
+          margin: 4px 2px;
         }
         a {
           font-size: 15px;
@@ -228,9 +229,7 @@
           border: 0.5px solid #cdcdcd;
           border-radius: 3px;
           display: inline;
-          &:hover {
-            text-decoration: none;
-          }
+          @include active_text();
         }
       }
     }
@@ -265,9 +264,7 @@
         vertical-align: middle;
         color: #777;
         text-decoration: none;
-        &:active {
-          color: #555;
-        }
+        @include active_text();
       }
     }
     .previous {
@@ -281,9 +278,7 @@
         vertical-align: middle;
         color: #777;
         text-decoration: none;
-        &:active {
-          color: #555;
-        }
+        @include active_text();
       }
     }
   }
@@ -341,7 +336,7 @@
         &--side {
           padding: 0;
           &_image {
-            @include hover();
+            @include active_image();
             width: 100%;
           }
         }
@@ -351,7 +346,7 @@
           height: 100px;
           &_title {
             margin-top: 5px;
-            @include hover();
+            @include active_text();
             font-weight: bold;
             font-size: 15px;
             line-height: 22px;
@@ -367,7 +362,7 @@
               text-decoration: none;
               color: #303030;
               font-weight: bold;
-              @include hover();
+              @include active_text();
             }
             &__date {
               position: absolute;

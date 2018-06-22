@@ -309,8 +309,8 @@
         padding: 0;
       }
       &--image {
+        @include active_image();
         &__item {
-          @include hover();
           width: 100%;
         }
       }
@@ -321,12 +321,12 @@
         &_title {
           margin-top: 0px;
           a {
-            @include hover();
+            @include active_text();
             font-weight: bold;
             font-size: 15px;
             line-height: 22px;
             color: black;
-            text-decoration: none;
+            // text-decoration: none;
           }
         }
         &_info {
@@ -335,10 +335,10 @@
           position: absolute;
           top: 80%;
           a {
+            @include active_text();
             text-decoration: none;
             color: #303030;
             font-weight: bold;
-            @include hover();
           }
           &__date {
             position: absolute;

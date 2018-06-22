@@ -22,3 +22,16 @@
     zoom:1;
   }
 }
+
+@mixin active_text() {
+  &:active {
+    zoom:1.2;
+  }
+}
+
+@mixin active_image {
+  &:active {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
