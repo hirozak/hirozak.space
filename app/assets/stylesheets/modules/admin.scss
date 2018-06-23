@@ -142,27 +142,6 @@
                 cursor: pointer;
               }
             }
-            #imageUpload {
-              .upload-dialog {
-                width: 70vw;
-                margin: 50px auto;
-              }
-              .modal-header {
-                .modal-title {
-                  text-align: center;
-                }
-              }
-              .modal-body {
-              }
-              .modal-footer {
-                text-align: center;
-                .btn {
-                  outline: none;
-                  width: 20%;
-                  padding: 6px 12px;
-                }
-              }
-            }
           }
         }
         .uk-htmleditor {
@@ -279,6 +258,28 @@
         }
         // categories#index --end//
       }
+    }
+  }
+}
+
+#imageUpload {
+  .upload-dialog {
+    width: 70vw;
+    margin: 50px auto;
+  }
+  .modal-header {
+    .modal-title {
+      text-align: center;
+    }
+  }
+  .modal-body {
+  }
+  .modal-footer {
+    text-align: center;
+    .btn {
+      outline: none;
+      width: 20%;
+      padding: 6px 12px;
     }
   }
 }

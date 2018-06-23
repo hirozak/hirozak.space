@@ -53,33 +53,6 @@
           <div class="col-md-1 fa-box">
             <%= fa_icon "cloud-upload 2x", data: {toggle: "modal", target: "#imageUpload"} %>
           </div>
-          <!-- imageUploadModal -->
-          <div class="modal fade" id="imageUpload" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="upload-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h3 class="modal-title">Upload Photo</h3>
-                </div>
-                <div class="modal-body">
-                  <%= form_for [:admin, @post.photos.build], html:{multipart: true, class:'dropzone', id:'my-dropzone'} do |f| %>
-                    <div class="dz-message needsclick">
-                      <h3>ファイルをここにドロップしてください</h3>
-                      <strong>アップロードするにはここをクリックしてください</strong>
-                    </div>
-                    <div class="fallback">
-                      <%= f.file_field :image %>
-                      <%= f.submit 'Upload Image' %>
-                    </div>
-                  <% end %>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-outline-default btn-round" data-dismiss="modal">Close</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- imageUploadModal -->
-
           <div class="col-md-1 fa-box">
             <%= f.label :image, class:"new-post-form_confirm__label" do %>
               <%= f.file_field :image, style: "display:none;" %>
@@ -109,5 +82,32 @@
 
       <% end %>
     </div>
+    <!-- imageUploadModal -->
+    <div class="modal fade" id="imageUpload" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="upload-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title">Upload Photo</h3>
+          </div>
+          <div class="modal-body">
+            <%= form_for [:admin, @post.photos.build], html: {class:'dropzone', id:'my-dropzone'} do |f| %>
+              <%= f.hidden_field :post_id, value: @post.id %>
+              <div class="dz-message needsclick">
+                <h3>ファイルをここにドロップしてください</h3>
+                <strong>アップロードするにはここをクリックしてください</strong>
+              </div>
+              <div class="fallback">
+                <%= f.file_field :image %>
+                <%= f.submit 'Upload Image' %>
+              </div>
+            <% end %>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-default btn-round" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- imageUploadModal -->
   </div>
 </div>
