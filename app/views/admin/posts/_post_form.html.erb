@@ -23,6 +23,8 @@
   <!-- HTML editor CSS and JavaScript -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.27.5/css/components/htmleditor.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/2.27.5/js/components/htmleditor.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.1/clipboard.min.js"></script>
 </head>
 <div class="admin">
   <%= render 'shared/admin_side' %>
@@ -86,12 +88,8 @@
     <div class="modal fade" id="imageUpload" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="upload-dialog" role="document">
         <div class="modal-content">
-          <div class="modal-header">
-            <h3 class="modal-title">Upload Photo</h3>
-          </div>
           <div class="modal-body">
-            <%= form_for [:admin, @post.photos.build], html: {class:'dropzone', id:'my-dropzone'} do |f| %>
-              <%= f.hidden_field :post_id, value: @post.id %>
+            <%= form_for [:admin, Photo.new], html: {class:'dropzone', id:'my-dropzone'} do |f| %>
               <div class="dz-message needsclick">
                 <h3>ファイルをここにドロップしてください</h3>
                 <strong>アップロードするにはここをクリックしてください</strong>
@@ -101,9 +99,6 @@
                 <%= f.submit 'Upload Image' %>
               </div>
             <% end %>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-outline-default btn-round" data-dismiss="modal">Close</button>
           </div>
         </div>
       </div>

@@ -3,19 +3,23 @@ class Admin::PhotosController < ApplicationController
   before_action :admin_user?
 
   def index
-  end
-
-  def create
-    binding.pry
-    @photo = Photo.new(photo_params)
-    if @photo.save
-      render json: { messsage: 'success', photoId: @photo.id}, status: 200
-    else
-      render json: { error: @photo.errors.full_messages.join('.') }, status: 400
+    @photos = Photo.all.order("created_at desc").limit(10)
+    respond_to do |format|
+      format.html
+      format.json
     end
   end
 
-  def destroy
+  def create
+    @photo = Photo.new(photo_params)
+    if @photo.save
+      respond_to do |format|
+        format.html
+        format.json
+      end
+    else
+      render json: { error: @photo.errors.full_messages.join('.') }, status: 400
+    end
   end
 
   private

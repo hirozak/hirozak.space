@@ -9,7 +9,7 @@ Rails.application.routes.draw do
       get :all, :published, :drafts, on: :collection
     end
     resources :categories, only: %i(index show create)
-    resources :photos, only: %i(index create destroy)
+    resources :photos, only: %i(index create)
   end
 
   root 'top#index'
