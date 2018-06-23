@@ -51,4 +51,4 @@ production:
   <<: *default
   database: hirozak_production
   username: hirozak
-  password: <%= ENV['MYSETUP_RAILS_DATABASE_PASSWORD'] %>
+  password: <%= ENV['HIROZAK_DATABASE_PASSWORD'] %>
