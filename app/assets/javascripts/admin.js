@@ -20,18 +20,14 @@ $(function() {
   //photos_controller.rbのcreateアクションが呼ばれる
   $('#my-dropzone').dropzone({
     maxFilesize: 200,// MB
-    addRemoveLinks: true,//削除リンク、cancelリンクを全てのpreviewファイルにつける。
-    paramName: 'photo[image]',//パラメータの名前
+    paramName: 'photo[image]',
     clickable: true,
     success: function(file, response) {
-      // file.previewElementでpreview要素のhtmlにアクセスできる
-      //add .dz-success class to file.previewElement
+      // file.previewElementでpreview要素のhtmlにアクセス
       $(file.previewElement).addClass('dz-success');
-      //add response.uploadId to .dz-remove class
       $(file.previewElement).find('.dz-remove').hide();
-
       $(file.previewElement).find('.dz-progress').hide();
-      $(file.previewElement).find('.dz-filename').data('dz-name').html(response.url);
+      $(file.previewElement).find('.dz-filename').find('span').text(response.url);
 
       // urlを埋め込んだ隠し要素を生成、埋め込み
       var imageUrl = insertImageUrl(response);
