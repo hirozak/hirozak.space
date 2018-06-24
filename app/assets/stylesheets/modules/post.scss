@@ -16,12 +16,12 @@
     &-info {
       margin-left: 5px;
       &--category {
-        font-size: 17px;
+        font-size: 16px;
         float: left;
         color: #777;
         a {
           font-weight: 500;
-          font-size: 17px;
+          font-size: 16px;
           color: #777;
           &:hover {
             text-decoration: none;
@@ -57,7 +57,8 @@
         margin-bottom: 20px;
       }
       p {
-        font-size: 17px;
+        font-size: 16px;
+        margin: 0 0 0.85em;
       }
       blockquote {
         strong {
@@ -67,6 +68,9 @@
       ul {
         margin-left: 3%;
         list-style: disc;
+      }
+      img {
+        margin: 10px;
       }
     }
   }
