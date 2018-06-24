@@ -50,6 +50,7 @@ $(function() {
               me.emit("thumbnail", value, value.thumb);
               me.emit("complete", value);
               $(value.previewTemplate).attr("id", value.id);
+              $(value.previewTemplate).find('.dz-size').hide();
               $(value.previewTemplate).find('.dz-filename').find('span').text(value.url);
               var imageUrl = insertImageUrl(value);
               $(value.previewTemplate).append(imageUrl);
