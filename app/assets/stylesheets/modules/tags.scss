@@ -8,10 +8,13 @@
         margin: 3px;
         border: 0.5px solid #cdcdcd;
         border-radius: 5px;
+        &:hover {
+          -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+        }
         a {
           font-size: 20px;
           color: #777;
-          @include hover();
           &:hover {
             text-decoration: none;
           }
@@ -36,10 +39,13 @@
         margin: 3px;
         border: 0.5px solid #cdcdcd;
         border-radius: 5px;
+        &:active {
+          -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+        }
         a {
           font-size: 20px;
           color: #777;
-          @include hover();
           &:hover {
             text-decoration: none;
           }
