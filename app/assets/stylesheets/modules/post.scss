@@ -14,6 +14,7 @@
       font-weight: bold;
     }
     &-info {
+      @include clearfix();
       margin-left: 5px;
       &--category {
         font-size: 16px;
@@ -90,6 +91,20 @@
       }
       img {
         margin: 10px;
+      }
+    }
+    &-sns {
+      margin: 10px 10px 30px 10px;
+      iframe {
+        vertical-align: middle;
+      }
+      .pocket-btn {
+        display: inline-block;
+        margin-left: 10px;
+        iframe {
+          vertical-align: middle;
+          margin-bottom: -2px;
+        }
       }
     }
   }
@@ -223,6 +238,7 @@
       font-weight: bold;
     }
     &-info {
+      @include clearfix();
       margin-left: 5px;
       &--category {
         font-size: 17px;
@@ -300,6 +316,22 @@
       }
       img {
         width: 100%;
+      }
+    }
+    &-sns {
+      margin: 20px 0;
+      iframe {
+        vertical-align: middle;
+        min-width: 80px;
+        min-height: 25px;
+      }
+
+      .pocket-btn {
+        display: inline-block;
+        margin-left: 10px;
+        iframe {
+          vertical-align: middle;
+        }
       }
     }
   }
