@@ -57,7 +57,7 @@ class Admin::PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :text, :image, :published, :category_id, :tag_list, :slug, :favorite)
+    params.require(:post).permit(:title, :text, :image, :published, :category_id, :tag_list, :slug, :favorite, :description)
   end
 
   def admin_user?

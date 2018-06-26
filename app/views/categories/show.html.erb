@@ -1,2 +1,3 @@
-<% provide(:title, @category.name) %>
+<% provide(:title, @category.name_ja) %>
+<% set_meta_tags title: @category.name, og: { title: @category.name_ja, type: 'website' }, twitter: { title: @category.name_ja } %>
 <%= render 'shared/post_list', main_title: @category.name %>

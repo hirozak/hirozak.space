@@ -107,6 +107,9 @@
           &_confirm {
             min-width: 500px;
             margin-bottom: 10px;
+            &__description {
+              padding-right: 0;
+            }
             &__label {
               &:hover {
                 cursor: pointer;

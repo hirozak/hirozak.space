@@ -50,7 +50,9 @@
           </div>
         </div>
         <div class="row new-post-form_confirm">
-          <div class="col-md-4"></div>
+          <div class="col-md-4 new-post-form_confirm__description">
+            <%= f.text_field :description, class: "form-control", placeholder: "post's description", required: 'true' %>
+          </div>
           <div class="col-md-1 fa-box">
             <%= fa_icon "cloud-upload 2x", data: {toggle: "modal", target: "#imageUpload"} %>
           </div>
@@ -65,7 +67,7 @@
             <% end %>
           </div>
           <div class="col-md-3 col-sm-3 new-post-form_confirm__slug">
-            <%= f.text_field :slug, class: "form-control form-control", placeholder: "set URL posts/xxx", required: 'true' %>
+            <%= f.text_field :slug, class: "form-control", placeholder: "set URL posts/xxx", required: 'true' %>
           </div>
           <div class="col-md-3 col-sm-3 new-post-form_confirm__button">
             <div class="new-post-form_confirm__button-published">
