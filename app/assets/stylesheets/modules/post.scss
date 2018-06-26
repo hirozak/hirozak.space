@@ -322,8 +322,6 @@
       margin: 20px 0;
       iframe {
         vertical-align: middle;
-        min-width: 80px;
-        min-height: 25px;
       }
 
       .pocket-btn {
@@ -331,6 +329,7 @@
         margin-left: 10px;
         iframe {
           vertical-align: middle;
+          margin-bottom: -2px;
         }
       }
     }
