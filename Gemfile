@@ -29,6 +29,7 @@ gem 'carrierwave'
 gem 'rmagick'
 gem 'fog'
 gem 'meta-tags'
+gem 'google-analytics-rails'
 
 group :production do
   gem'rails_12factor'
