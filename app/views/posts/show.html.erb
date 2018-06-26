@@ -1,4 +1,4 @@
-<% set_meta_tags title: "#{@post.title}", description: @post.description, keywords: @post.tag_list.join(","), og: { title: "#{@post.title} | hirozak", description: @post.description, type: 'article', image: @post.image.url }, twitter: { title: "#{@post.title} | hirozak", description: @post.description, image: @post.image.url } %>
+<% set_meta_tags title: @post.title, description: @post.description, keywords: @post.tag_list.join(","), og: { title: @post.title, description: @post.description, type: 'article', image: @post.image.url }, twitter: { title: @post.title, description: @post.description, image: @post.image.url } %>
 <header>
   <%= render 'shared/navbar' %>
   <%= render 'shared/header_image' %>

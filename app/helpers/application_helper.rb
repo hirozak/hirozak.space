@@ -3,7 +3,6 @@ module ApplicationHelper
   def default_meta_tags
     {
       site: 'hirozak',
-      title: 'hirozak',
       reverse: true,
       charset: 'utf-8',
       description: 'プログラミングやガジェットについてのテック系の話、音楽や映画、旅行など興味のあること全てを更新するブログ。',
