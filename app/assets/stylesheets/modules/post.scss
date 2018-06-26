@@ -205,6 +205,9 @@
         }
         &--main {
           padding-left: 10px;
+          a:hover {
+            text-decoration: none;
+          }
           &_title {
             font-weight: 600;
             font-size: 0.85em;
