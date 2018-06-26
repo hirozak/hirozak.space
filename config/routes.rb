@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'about_me/index'
-
   devise_for :users
 
   resources :admin, only: %i(index)
