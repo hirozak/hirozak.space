@@ -14,7 +14,7 @@
               <%= @post.created_at.to_s(:published_on) %>
             </div>
           </div>
-          <h2 class="post-title"><%= @post.title %></h2>
+          <h1 class="post-title"><%= @post.title %></h1>
           <div class="post-info" ontouchstart="">
             <div class="post-info--category">
               <%= fa_icon "home" %> <%= link_to "Home", root_path %> / <%= link_to @post.category.name, @post.category %>

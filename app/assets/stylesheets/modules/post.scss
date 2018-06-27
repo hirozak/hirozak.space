@@ -12,6 +12,7 @@
       margin-bottom: 15px;
       color: black;
       font-weight: bold;
+      font-size: 27px;
     }
     &-info {
       @include clearfix();
@@ -54,17 +55,21 @@
       clear: both;
       padding: 30px 10px 10px;
       h2 {
-        margin-top: 10px;
-        margin-bottom: 20px;
+        margin-top: 20px;
+        margin-bottom: 15px;
+        font-size: 26px;
+        font-weight: bold;
         strong {
-          font-size: 30px;
+          font-size: 26px;
         }
       }
       h3 {
-        margin-top: 10px;
-        margin-bottom: 20px;
+        margin-top: 20px;
+        margin-bottom: 15px;
+        font-size: 22px;
+        font-weight: bold;
         strong {
-          font-size: 24px;
+          font-size: 22px;
         }
       }
       p {
@@ -239,6 +244,7 @@
       margin-bottom: 15px;
       color: black;
       font-weight: bold;
+      font-size: 22px;
     }
     &-info {
       @include clearfix();
@@ -287,17 +293,21 @@
         font-size: 15px;
       }
       h2 {
-        margin-top: 10px;
-        margin-bottom: 20px;
+        margin-top: 20px;
+        margin-bottom: 15px;
+        font-size: 25px;
+        font-weight: bold;
         strong {
-          font-size: 30px;
+          font-size: 25px;
         }
       }
       h3 {
-        margin-top: 10px;
-        margin-bottom: 20px;
+        margin-top: 20px;
+        margin-bottom: 15px;
+        font-size: 22px;
+        font-weight: bold;
         strong {
-          font-size: 24px;
+          font-size: 22px;
         }
       }
       a {
@@ -377,7 +387,7 @@
     &--title {
       text-align: center;
       margin-bottom: 20px;
-      font-size: 33px;
+      font-size: 25px;
       font-weight: bold;
       color: black;
     }
@@ -409,7 +419,7 @@
       color: black;
       text-align: center;
       font-weight: bold;
-      font-size: 35px;
+      font-size: 25px;
       margin-bottom: 5px;
     }
     &--post {
@@ -438,9 +448,9 @@
             margin-top: 5px;
             @include active_text();
             font-weight: bold;
-            font-size: 15px;
+            font-size: 13px;
             line-height: 22px;
-            color: black;
+            color: #444;
           }
           &_info {
             width: 100%;
