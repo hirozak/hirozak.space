@@ -91,9 +91,12 @@
         text-align: center;
         &-link {
           font-weight: bolder;
-          font-size: 50px;
+          font-size: 57px;
           line-height: 40px;
-          margin-left: 60px;
+          margin-left: 57px;
+          @media(max-width: 330px) {
+            font-size: 47px;
+          }
         }
       }
     }

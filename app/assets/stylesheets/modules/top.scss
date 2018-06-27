@@ -11,6 +11,9 @@
     }
     &_image {
       height: 150px;
+      @media(max-width: 767px) {
+        height: 135px;
+      }
     }
     &_title {
       margin-top: 5px;
@@ -234,7 +237,6 @@
       }
       &--link {
         margin-top: 10px;
-        text-align: center;
       }
     }
   }
@@ -247,7 +249,6 @@
   .top-header {
     text-align: center;
     &--image {
-      height: 85px;
       width: 100%;
     }
   }
@@ -445,7 +446,6 @@
       }
       &--link {
         margin-top: 10px;
-        text-align: center;
       }
     }
   }
