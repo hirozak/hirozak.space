@@ -287,7 +287,7 @@
     border-top: 0.5px solid #cdcdcd;
   }
   .main-title {
-    font-size: 35px;
+    font-size: 25px;
     font-weight: bold;
     text-align: center;
     margin-bottom: 5px;
@@ -323,8 +323,8 @@
           a {
             @include active_text();
             text-decoration: none;
-            font-weight: bold;
-            font-size: 15px;
+            font-weight: bolder;
+            font-size: 13px;
             line-height: 17px;
             color: black;
             // text-decoration: none;
