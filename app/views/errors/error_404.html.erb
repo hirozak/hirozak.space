@@ -1,0 +1,18 @@
+<% set_meta_tags title: "404 Not Found", og: { title: "404 Not Found", type: 'website' }, twitter: { title: "404 Not Found" } %>
+<header>
+  <%= render 'shared/navbar' %>
+  <%= render 'shared/header_image' %>
+  <%= render 'shared/header_menu' %>
+</header>
+<div class="error-wrapper">
+  <div class="container-fluid main-container">
+    <div class="row posts-wrapper">
+      <div class="tags col-md-6 col-md-offset-3">
+        <h2 class="main-title">404 Not Found</h2>
+        <p>お探しのページは見つかりませんでした。</p>
+      </div>
+    </div>
+  </div>
+</div>
+<%= render 'shared/sub_content' %>
+<%= render 'shared/footer' %>

@@ -17,4 +17,5 @@ Rails.application.routes.draw do
   resources :tags, only: %i(index show)
   resources :about_me, only: %i(index)
 
+  get '*path', to: 'application#render_404'
 end

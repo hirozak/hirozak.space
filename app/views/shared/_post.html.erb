@@ -7,7 +7,7 @@
         </div>
       </div>
       <div class="col-md-7 col-sm-7 col-xs-7 post-item--main">
-        <h3 class="post-item--main_title"><%= link_to post.title, post %></h3>
+        <div class="post-item--main_title"><%= link_to post.title, post %></div>
         <div class="post-item--main_info">
           <%= link_to post.category.name, post.category, class: "post-item--main_info__category" %>
           <span class="post-item--main_info__date">

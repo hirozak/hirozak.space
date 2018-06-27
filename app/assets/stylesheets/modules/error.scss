@@ -1,0 +1,17 @@
+@media(min-width: 768px) {
+  .error-wrapper {
+    margin-top: 30px;
+    border-bottom: 0.5px solid #cdcdcd;
+    p {
+      text-align: center;
+    }
+  }
+}
+
+@media(max-width: 767px) {
+  .error-wrapper {
+    p {
+      text-align: center;
+    }
+  }
+}
