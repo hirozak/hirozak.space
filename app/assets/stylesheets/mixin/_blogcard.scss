@@ -60,15 +60,13 @@
   }
   .blogCardFooter {
     font-size: 12px;
+    margin-bottom: 5px;
     @include clearfix();
   }
   .blogCardFooter a {
     color: #9aa5ab;
     display: block;
     float: right;
-    @media(max-width: 767px) {
-      display: none;
-    }
   }
   .blogCardFooter a img {
     margin-right: 5px;
@@ -141,6 +139,7 @@
   }
   .blogCardFooter {
     font-size: 12px;
+    margin-bottom: 5px;
     @include clearfix();
   }
   .blogCardFooter a {
