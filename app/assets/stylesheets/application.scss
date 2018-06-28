@@ -1,11 +1,11 @@
 // setup
 @import "./reset";
 @import "./mixin/typography";
-@import "./mixin/slick";
-@import "./mixin/slick-theme";
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
+@import 'slick';
+@import 'slick-theme';
 @import "dropzone/dropzone";
 @import "./mixin/clearfix";
 @import "./mixin/hover_active";

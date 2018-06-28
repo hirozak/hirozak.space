@@ -13,5 +13,6 @@
 //= require rails-ujs
 //= require jquery
 //= require dropzone
+//= require jquery.slick
 //= require bootstrap-sprockets
 //= require_tree .
