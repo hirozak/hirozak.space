@@ -1,12 +1,13 @@
 require 'google/apis/analyticsreporting_v4'
+require 'google/api_client/auth/key_utils'
 
 class Analytics
 
   def initialize
     @base_url = "https://hirozak.space"
-    @view_id  = "177685128"
+    @view_id  = ENV["GA_VIEW_ID"]
     @analytics = Google::Apis::AnalyticsreportingV4
-    auth
+    authorize!
   end
 
 
@@ -45,13 +46,24 @@ class Analytics
 
   private
 
-    def auth
-      scope = ['https://www.googleapis.com/auth/analytics.readonly']
-      @client = @analytics::AnalyticsReportingService.new
-      @client.authorization = Google::Auth::ServiceAccountCredentials.make_creds(
-        json_key_io: File.open('google-auth-cred.json'),
-        scope: scope
-      )
+    def signing_key
+      return if @signing_key
+
+      keyfile = Rails.root.join('google_analytics.p12')
+
+      passphrase = ENV["GA_KEY_SECRET"]
+      @signing_key = Google::APIClient::KeyUtils.load_from_pkcs12(keyfile, passphrase)
     end
 
+    def authorize!
+      @client = @analytics::AnalyticsReportingService.new
+      @client.authorization = Signet::OAuth2::Client.new(
+        token_credential_uri: 'https://accounts.google.com/o/oauth2/token',
+        audience: 'https://accounts.google.com/o/oauth2/token',
+        scope: 'https://www.googleapis.com/auth/analytics.readonly',
+        issuer: 'hirozak-space-ga@hirozak-space.iam.gserviceaccount.com', # EDIT
+        signing_key: signing_key
+      )
+      @client.authorization.fetch_access_token!
+    end
 end
