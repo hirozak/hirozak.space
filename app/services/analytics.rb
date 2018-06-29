@@ -13,9 +13,9 @@ class Analytics
 
   def popular_posts
     date_range = @analytics::DateRange.new(start_date: '7DaysAgo', end_date: 'today')
-    metric = @analytics::Metric.new(expression: 'ga:users', alias: 'users')
+    metric = @analytics::Metric.new(expression: 'ga:pageviews', alias: 'pageviews')
     dimension = @analytics::Dimension.new(name: 'ga:pagePath')
-    order_by = @analytics::OrderBy.new(field_name: 'ga:users', sort_order: 'DESCENDING')
+    order_by = @analytics::OrderBy.new(field_name: 'ga:pageviews', sort_order: 'DESCENDING')
     request = @analytics::GetReportsRequest.new(
       report_requests: [@analytics::ReportRequest.new(
         view_id: @view_id,
@@ -36,6 +36,7 @@ class Analytics
         slug = row.dimensions.first.to_s[7..-1]
         if post = Post.find_by(slug: slug)
           posts << post
+          break if posts.length == 5
         end
       end
     end
