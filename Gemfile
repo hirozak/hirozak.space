@@ -16,8 +16,8 @@ gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
 gem 'sass-rails', '~> 5.0'
 gem 'bootstrap-sass', '~> 3.3.7'
-gem "font-awesome-rails"
-gem "jquery-slick-rails"
+gem 'font-awesome-rails'
+gem 'jquery-slick-rails'
 gem 'dropzonejs-rails'
 gem 'redcarpet'
 
@@ -31,6 +31,7 @@ gem 'rmagick'
 gem 'fog'
 gem 'meta-tags'
 gem 'google-analytics-rails'
+gem 'google-api-client'
 
 group :production do
   gem'rails_12factor'

@@ -22,3 +22,5 @@
 /config/application.yml
 
 /public/uploads
+
+/google-auth-cred.json
