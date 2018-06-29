@@ -76,6 +76,9 @@
         font-size: 16px;
         margin: 0 0 0.85em;
         line-height: 2.2em;
+        strong {
+          font-size: 16px;
+        }
       }
       a {
         font-size: 16px;
@@ -98,6 +101,11 @@
       img {
         margin: 10px;
         width: 100%;
+      }
+      .vertically {
+        img {
+          width: 30%;
+        }
       }
     }
     &-sns {
@@ -294,6 +302,9 @@
       p {
         font-size: 15px;
         line-height: 1.8em;
+        strong {
+          font-size: 15px;
+        }
       }
       h2 {
         margin-top: 20px;
