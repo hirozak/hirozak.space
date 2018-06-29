@@ -5,7 +5,7 @@ class Analytics
 
   def initialize
     @base_url = "https://hirozak.space"
-    @view_id  = ENV["GA_VIEW_ID"]
+    @view_id  = "177685128"
     @analytics = Google::Apis::AnalyticsreportingV4
     authorize!
   end
