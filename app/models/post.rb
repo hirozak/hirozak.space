@@ -2,6 +2,8 @@ class Post < ApplicationRecord
   belongs_to :user
   belongs_to :category
 
+  has_one :popular_post
+
   acts_as_taggable
 
   validates :title, presence: true

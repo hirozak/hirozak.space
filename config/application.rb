@@ -27,7 +27,7 @@ module Hirozak
 
     # # optional
     # config.autoload_paths += Dir["#{config.root}/app/validators"]
-    config.autoload_paths += Dir["#{config.root}/app/services"]
+    # config.autoload_paths += Dir["#{config.root}/app/services"]
 
   end
 end
