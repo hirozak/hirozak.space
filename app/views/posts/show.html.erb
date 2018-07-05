@@ -1,4 +1,7 @@
 <% set_meta_tags title: @post.title, description: @post.description, keywords: @post.tag_list.join(","), og: { title: @post.title, description: @post.description, type: 'article', image: @post.image.url }, twitter: { title: @post.title, description: @post.description, image: @post.image.url } %>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atelier-dune-dark.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 <header>
   <%= render 'shared/navbar' %>
   <%= render 'shared/header_image' %>
