@@ -7,6 +7,7 @@ Category.create!(name: "Travel")
 
 posts = Post.all
 5.times do |n|
-  post = posts[n+1]
+  break if posts.length < n + 1
+  post = posts[n]
   PopularPost.create!(rank: n+1, post_id: post.id )
 end
