@@ -1,0 +1,52 @@
+AllCops:
+  TargetRubyVersion: 2.5.1
+  Exclude:
+    - 'db/**/*.rb'
+    - 'spec/*_helper.rb'
+    - 'node_modules/**/*'
+    - 'vendor/bundle/**/*'
+
+Rails:
+  Enabled: true
+
+Style/IdenticalConditionalBranches:
+  Enabled: false
+
+Rails/OutputSafety:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/DateTime:
+  Enabled: false
+
+Style/MixinUsage:
+  Enabled: false
+
+Style/GuardClause:
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: false
+
+Metrics/LineLength:
+  Enabled: false
+
+Metrics/MethodLength:
+  Enabled: false
+
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/ClassLength:
+  Enabled: false
+
+Lint/UselessAssignment:
+  Enabled: false

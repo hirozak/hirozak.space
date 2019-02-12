@@ -1,5 +1,4 @@
 module ApplicationHelper
-
   def default_meta_tags
     {
       site: 'hirozak',
@@ -10,7 +9,7 @@ module ApplicationHelper
       canonical: request.original_url,
       separator: '|',
       icon: [
-        { href: image_url('favicon.ico') },
+        { href: image_url('favicon.ico') }
       ],
       og: {
         site_name: 'hirozak',
@@ -19,15 +18,14 @@ module ApplicationHelper
         type: 'website',
         url: request.original_url,
         image: image_url('top-header.jpg'),
-        locale: 'ja_JP',
+        locale: 'ja_JP'
       },
       twitter: {
         card: 'summary',
         title: 'hirozak',
         description: 'テック系、音楽などのサブカルチャー、旅行まで扱うブログ',
-        image: image_url('top-header.jpg'),
+        image: image_url('top-header.jpg')
       }
     }
   end
-
 end

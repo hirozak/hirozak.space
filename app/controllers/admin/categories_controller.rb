@@ -1,6 +1,4 @@
 class Admin::CategoriesController < ApplicationController
-  before_action :authenticate_user!
-  before_action :admin_user?
   before_action :set_categories
 
   def index
@@ -15,9 +13,9 @@ class Admin::CategoriesController < ApplicationController
   def create
     @category = Category.new(category_params)
     if @category.save
-      redirect_to admin_categories_path, notice: "カテゴリを作成しました。"
+      redirect_to admin_categories_path, notice: 'カテゴリを作成しました。'
     else
-      flash.alert = "カテゴリーの作成に失敗しました。"
+      flash.alert = 'カテゴリーの作成に失敗しました。'
       render :index
     end
   end
@@ -30,9 +28,5 @@ class Admin::CategoriesController < ApplicationController
 
   def set_categories
     @categories = Category.all
-  end
-
-  def admin_user?
-    redirect_to root_path if !current_user.admin?
   end
 end
