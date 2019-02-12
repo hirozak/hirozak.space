@@ -16,5 +16,5 @@ Rails.application.routes.draw do
     resources :photos, only: %i[index create]
   end
 
-  get '*path', to: 'application#render_404'
+  get '*path', to: 'application#render_404' if Rails.env.production?
 end

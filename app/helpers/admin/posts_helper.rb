@@ -29,12 +29,16 @@ module Admin::PostsHelper
   end
 
   def previous_post(post)
-    link_to(previous_post.title, previous_post, class: 'previous_post') if previous_post == post
+    if post
+      link_to(post.title, post, class: 'previous_post')
+    else
+      link_to(fa_icon('home lg') + ' トップ', root_path, class: 'next_post')
+    end
   end
 
   def next_post(post)
-    if next_post == post
-      link_to(next_post.title, next_post, class: 'next_post')
+    if post
+      link_to(post.title, post, class: 'next_post')
     else
       link_to(fa_icon('home lg') + ' トップ', root_path, class: 'next_post')
     end
