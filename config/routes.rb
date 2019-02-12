@@ -2,8 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   root 'top#index'
-  resources :posts, only: %i(show)
-  resources :all, only: %i(index)
+  resources :posts, only: %i(index show)
   resources :categories, only: %i(show)
   resources :tags, only: %i(index show)
   resources :about, only: %i(index)
