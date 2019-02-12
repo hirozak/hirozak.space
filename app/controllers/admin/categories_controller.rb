@@ -1,6 +1,4 @@
 class Admin::CategoriesController < ApplicationController
-  before_action :authenticate_user!
-  before_action :admin_user?
   before_action :set_categories
 
   def index
@@ -30,9 +28,5 @@ class Admin::CategoriesController < ApplicationController
 
   def set_categories
     @categories = Category.all
-  end
-
-  def admin_user?
-    redirect_to root_path if !current_user.admin?
   end
 end

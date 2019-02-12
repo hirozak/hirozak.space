@@ -1,7 +1,4 @@
 class Admin::PhotosController < ApplicationController
-  before_action :authenticate_user!
-  before_action :admin_user?
-
   def index
     @photos = Photo.all.order("created_at desc").limit(10)
     respond_to do |format|
@@ -26,10 +23,6 @@ class Admin::PhotosController < ApplicationController
 
   def photo_params
     params.require(:photo).permit(:image)
-  end
-
-  def admin_user?
-    redirect_to root_path if !current_user.admin?
   end
 
 end

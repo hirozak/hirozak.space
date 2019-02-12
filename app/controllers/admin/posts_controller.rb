@@ -1,7 +1,4 @@
 class Admin::PostsController < ApplicationController
-  before_action :authenticate_user!
-  before_action :admin_user?
-
   def new
     @post = current_user.posts.new
   end
@@ -58,9 +55,5 @@ class Admin::PostsController < ApplicationController
 
   def post_params
     params.require(:post).permit(:title, :text, :image, :published, :category_id, :tag_list, :slug, :favorite, :description)
-  end
-
-  def admin_user?
-    redirect_to root_path if !current_user.admin?
   end
 end
