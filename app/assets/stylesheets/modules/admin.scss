@@ -151,10 +151,13 @@
         .uk-htmleditor {
           clear: both;
           &-code {
-            min-height: 510px;
+            height: calc(100vh - 250px);
           }
           &-preview {
-            min-height: 510px;
+            height: calc(100vh - 250px);
+          }
+          .CodeMirror {
+            height: calc(100vh - 250px) !important;
           }
         }
         .uk-htmleditor-preview {
