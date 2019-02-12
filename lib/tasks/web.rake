@@ -1,10 +1,9 @@
 namespace :web do
-  desc "get request for root"
+  desc 'get request for root'
 
-  task :get_root => :environment do
+  task get_root: :environment do
     session = ActionDispatch::Integration::Session.new(Rails.application)
-    session.get "/"
+    session.get '/'
     puts 'success!'
   end
-
 end

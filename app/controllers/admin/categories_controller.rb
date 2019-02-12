@@ -13,9 +13,9 @@ class Admin::CategoriesController < ApplicationController
   def create
     @category = Category.new(category_params)
     if @category.save
-      redirect_to admin_categories_path, notice: "カテゴリを作成しました。"
+      redirect_to admin_categories_path, notice: 'カテゴリを作成しました。'
     else
-      flash.alert = "カテゴリーの作成に失敗しました。"
+      flash.alert = 'カテゴリーの作成に失敗しました。'
       render :index
     end
   end

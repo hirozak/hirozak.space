@@ -2,7 +2,7 @@ class Post < ApplicationRecord
   belongs_to :user
   belongs_to :category
 
-  has_one :popular_post
+  has_one :popular_post, dependent: :destroy
 
   acts_as_taggable
 
@@ -13,9 +13,9 @@ class Post < ApplicationRecord
 
   mount_uploader :image, ImageUploader
 
-  enum published: {Draft: false, Published: true}
+  enum published: { Draft: false, Published: true }
 
-  scope :default_order, -> { order("created_at desc") }
+  scope :default_order, -> { order('created_at desc') }
   scope :published, -> { where(published: true) }
   scope :drafts, -> { where(published: false) }
   scope :favorite, -> { where(favorite: true) }
@@ -25,7 +25,7 @@ class Post < ApplicationRecord
   end
 
   def previous
-    Post.published.default_order.where('created_at <= ? and id < ?', created_at, id).first
+    Post.published.default_order.find_by('created_at <= ? and id < ?', created_at, id)
   end
 
   def next

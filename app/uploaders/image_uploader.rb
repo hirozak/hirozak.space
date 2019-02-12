@@ -4,19 +4,18 @@ class ImageUploader < CarrierWave::Uploader::Base
   process resize_to_limit: [400, 400]
 
   version :thumb do
-   process :resize_to_fill => [315, 225]
+    process resize_to_fill: [315, 225]
   end
 
   version :thumb_mini do
-   process :resize_to_fill => [225, 150]
+    process resize_to_fill: [225, 150]
   end
 
   def store_dir
-    "uploads/images/"
+    'uploads/images/'
   end
 
   def extension_white_list
-    %w(jpg jpeg gif png)
+    %w[jpg jpeg gif png]
   end
-
 end

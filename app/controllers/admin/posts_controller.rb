@@ -6,9 +6,9 @@ class Admin::PostsController < ApplicationController
   def create
     @post = current_user.posts.new(post_params)
     if @post.save
-      redirect_to edit_admin_post_path(@post), notice: "記事を投稿しました。"
+      redirect_to edit_admin_post_path(@post), notice: '記事を投稿しました。'
     else
-      flash.alert = "投稿に失敗しました。"
+      flash.alert = '投稿に失敗しました。'
       render :new
     end
   end
@@ -21,9 +21,9 @@ class Admin::PostsController < ApplicationController
     @post = Post.find_by(slug: params[:id])
     # binding.pry
     if @post.update(post_params)
-      redirect_to edit_admin_post_path(@post), notice: "記事を更新しました。"
+      redirect_to edit_admin_post_path(@post), notice: '記事を更新しました。'
     else
-      flash.alert = "記事の更新に失敗しました。"
+      flash.alert = '記事の更新に失敗しました。'
       render :edit
     end
   end
@@ -31,10 +31,10 @@ class Admin::PostsController < ApplicationController
   def destroy
     post = Post.find_by(slug: params[:id])
     if post.destroy
-      flash[:notice] = "削除しました。"
+      flash[:notice] = '削除しました。'
       redirect_back(fallback_location: all_admin_posts_path)
     else
-      flash.alert = "削除できませんでした。"
+      flash.alert = '削除できませんでした。'
       redirect_back(fallback_location: all_admin_posts_path)
     end
   end

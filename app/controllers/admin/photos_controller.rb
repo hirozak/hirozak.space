@@ -1,6 +1,6 @@
 class Admin::PhotosController < ApplicationController
   def index
-    @photos = Photo.all.order("created_at desc").limit(10)
+    @photos = Photo.all.order('created_at desc').limit(10)
     respond_to do |format|
       format.html
       format.json
@@ -15,7 +15,7 @@ class Admin::PhotosController < ApplicationController
         format.json
       end
     else
-      render json: { error: @photo.errors.full_messages.join('.') }, status: 400
+      render json: { error: @photo.errors.full_messages.join('.') }, status: :bad_request
     end
   end
 
@@ -24,5 +24,4 @@ class Admin::PhotosController < ApplicationController
   def photo_params
     params.require(:photo).permit(:image)
   end
-
 end
