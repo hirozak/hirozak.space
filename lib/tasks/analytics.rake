@@ -36,7 +36,7 @@ namespace :analytics do
     data = response.reports.first.data
     num = 0
     data.rows.each do |row|
-      break unless row.dimensions.to_s.include?('posts')
+      next unless row.dimensions.to_s.include?('/posts/')
 
       slug = row.dimensions.first.to_s[7..-1]
       post = Post.find_by(slug: slug)
