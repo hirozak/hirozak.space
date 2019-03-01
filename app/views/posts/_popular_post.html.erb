@@ -6,15 +6,17 @@
         <%= image_tag popular_post.image.url(:thumb_mini), class: "side-bar--post-item--side_image" %>
       </div>
       <div class="col-md-7 col-xs-7 side-bar--post-item--main">
-        <div class="side-bar--post-item--main_title">
+        <p class="side-bar--post-item--main_title">
           <%= popular_post.title %>
-        </div>
-        <div class="side-bar--post-item--main_info visible-xs">
-          <%= link_to popular_post.category.name, "#", class: "side-bar--post-item--main_info__category" %>
+        </p>
+        <p class="side-bar--post-item--main_info visible-xs">
+          <span class="side-bar--post-item--main_info__category">
+            <%= popular_post.category.name %>
+          </span>
           <span class="side-bar--post-item--main_info__date">
             <%= popular_post.created_at.to_s(:published_on) %>
           </span>
-        </div>
+        </p>
       </div>
     <% end %>
   </div>

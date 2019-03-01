@@ -460,14 +460,10 @@
           padding-left: 5px;
           padding-right: 10px;
           height: 100px;
-          a {
-            text-decoration: none;
-          }
           &_title {
             margin-top: 5px;
-            @include active_text();
             font-weight: bold;
-            font-size: 13px;
+            font-size: 14px;
             line-height: 17px;
             color: #444;
           }
@@ -476,11 +472,11 @@
             margin-left: 5px;
             position: absolute;
             top: 80%;
-            a {
+            &__category {
+              font-size: 13px;
               text-decoration: none;
               color: #303030;
               font-weight: bold;
-              @include active_text();
             }
             &__date {
               position: absolute;
