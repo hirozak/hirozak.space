@@ -1,11 +1,11 @@
 <div class="col-md-6 post-list" ontouchstart="">
   <%= link_to post, class: "post-item" do %>
-    <div class="col-md-5 col-sm-5 col-xs-5 post-item--side">
+    <div class="post-item--side">
       <div class="post-item--image">
         <%= image_tag post.image.url(:thumb), class: "post-item--image__item" %>
       </div>
     </div>
-    <div class="col-md-7 col-sm-7 col-xs-7 post-item--main">
+    <div class="post-item--main">
       <p class="post-item--main_title"><%= post.title %></p>
       <p class="post-item--main_info">
         <span class="post-item--main_info__category">

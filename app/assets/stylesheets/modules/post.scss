@@ -214,7 +214,12 @@
       }
       &-item {
         margin-left: 20px;
+        display: flex;
+        &:hover {
+          text-decoration: none;
+        }
         &--side {
+          width: 41.6666666667%;
           padding-left: 0;
           padding-right: 0;
           &_image {
@@ -222,6 +227,7 @@
           }
         }
         &--main {
+          width: 58.3333333333%;
           padding-left: 10px;
           a:hover {
             text-decoration: none;
@@ -230,6 +236,9 @@
             font-weight: 600;
             font-size: 0.85em;
             color: #777;
+          }
+          &_info {
+            display: none;
           }
         }
       }
@@ -428,6 +437,7 @@
         font-weight: 600;
         font-size: 0.85em;
         color: #777;
+        height: 40px;
       }
     }
   }
@@ -449,20 +459,29 @@
       &-item {
         margin: 0;
         width: 100%;
-        display: inline-block;
+        display: flex;
+        &:hover {
+          text-decoration: none;
+        }
         &--side {
           padding: 0;
+          width: 41.6666666667%;
           &_image {
             @include active_image();
             width: 100%;
           }
         }
         &--main {
+          width: 58.3333333333%;
           padding-left: 5px;
           padding-right: 10px;
-          height: 100px;
+          justify-content: space-between;
+          display: flex;
+          flex-direction: column;
+          text-decoration: none;
           &_title {
             margin-top: 5px;
+            margin-left: 5px;
             font-weight: bold;
             font-size: 14px;
             line-height: 17px;
@@ -471,8 +490,8 @@
           &_info {
             width: 100%;
             margin-left: 5px;
-            position: absolute;
-            top: 80%;
+            justify-content: space-between;
+            display: flex;
             &__category {
               font-size: 13px;
               text-decoration: none;
@@ -480,8 +499,7 @@
               font-weight: bold;
             }
             &__date {
-              position: absolute;
-              left: 50%;
+              font-size: 12px;
               color: #777;
             }
           }

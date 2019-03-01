@@ -69,6 +69,8 @@
   }
   .main-container {
     margin: 30px 120px;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
   .main-title {
     text-align: center;
@@ -84,6 +86,7 @@
       margin: 5px;
       display: inline-block;
       padding: 25px 10px;
+      display: flex;
       text-decoration :none;
       box-shadow: 0px 1px 6px rgba(0,0,0,0.4);
       transition: .3s;
@@ -93,6 +96,7 @@
       }
       &--side {
         padding: 0;
+        width: 41.6666666667%;
       }
       &--image {
         &__item {
@@ -101,8 +105,12 @@
         }
       }
       &--main {
-        padding-right: 0;
-        height: 150px;
+        width: 58.3333333333%;
+        padding-left: 15px;
+        padding-right: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         &_title {
           margin-top: 5px;
           font-weight: bold;
@@ -112,18 +120,14 @@
           text-decoration: none;
         }
         &_info {
-          width: 100%;
-          position: absolute;
-          top: 80%;
-          margin-left: 5px;
+          display: flex;
+          justify-content: space-between;
           &__category {
             text-decoration: none;
             color: #303030;
             font-weight: bold;
           }
           &__date {
-            position: absolute;
-            left: 65%;
             color: #777;
           }
         }
@@ -298,6 +302,7 @@
       width: 100%;
       display: inline-block;
       padding: 15px 5px;
+      display: flex;
       text-decoration :none;
       transition: .3s;
       &--link {
@@ -305,6 +310,7 @@
       }
       &--side {
         padding: 0;
+        width: 41.6666666667%;
       }
       &--image {
         @include active_image();
@@ -313,11 +319,15 @@
         }
       }
       &--main {
+        width: 58.3333333333%;
         padding-left: 5px;
         padding-right: 10px;
-        height: 100px;
+        justify-content: space-between;
+        display: flex;
+        flex-direction: column;
         &_title {
           margin-top: 0px;
+          margin-left: 5px;
           text-decoration: none;
           font-weight: bold;
           font-size: 14px;
@@ -327,8 +337,8 @@
         &_info {
           width: 100%;
           margin-left: 5px;
-          position: absolute;
-          top: 80%;
+          justify-content: space-between;
+          display: flex !important;
           &__category {
             font-size: 13px;
             text-decoration: none;
@@ -336,9 +346,8 @@
             font-weight: bold;
           }
           &__date {
-            position: absolute;
-            left: 50%;
             color: #777;
+            font-size: 12px;
           }
         }
       }
@@ -388,7 +397,7 @@
     padding: 0 5px 25px;
     border-bottom: 0.5px solid #cdcdcd;
     &-title {
-      font-size: 30px;
+      font-size: 25px;
       font-weight: bold;
       text-align: center;
       margin-bottom: 25px;
@@ -404,7 +413,7 @@
     &-info {
       padding-right: 0;
       &--name {
-        font-size: 21px;
+        font-size: 18px;
         font-weight: bold;
         margin-top: 0;
         margin-bottom: 0;
@@ -427,7 +436,7 @@
   }
   .this_blog {
     &-title {
-      font-size: 30px;
+      font-size: 25px;
       font-weight: bold;
       text-align: center;
       margin-bottom: 25px;
