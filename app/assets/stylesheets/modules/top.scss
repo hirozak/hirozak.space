@@ -129,14 +129,20 @@
         }
       }
     }
-    &-all {
+    &-wrapper {
       @include clearfix();
+    }
+    &-pagination {
+      display: block;
     }
     .pagination {
       display: block;
       margin: 0 auto;
       padding-top: 30px;
       text-align: center;
+      align-items: center;
+      justify-content: center;
+      display: flex;
       a {
         color: #777;
       }
@@ -145,11 +151,12 @@
       }
       .page {
         width: 27px;
-        // border: 1px solid #cdcdcd;
         padding: 3px 6px 3px 8px;
-        margin: 0 1px;
+        margin: 0 5px;
+        font-size: 18px;
         a {
           line-height: 25px;
+          font-size: 18px;
         }
         span {
           font-size: 15px;
@@ -158,9 +165,7 @@
       &-arrow {
         width: 20px;
         a {
-          width: 20px;
-          line-height: 20px;
-          font-size: 1.4em;
+          font-size: 2em;
         }
       }
     }
