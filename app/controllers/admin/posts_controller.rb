@@ -40,15 +40,15 @@ class Admin::PostsController < ApplicationController
   end
 
   def all
-    @posts = current_user.posts.includes(:category).default_order.page(params[:page]).per(8)
+    @posts = current_user.posts.includes(:category).default_order.page(params[:page]).per(10)
   end
 
   def published
-    @posts = current_user.posts.published.includes(:category).default_order.page(params[:page]).per(8)
+    @posts = current_user.posts.published.includes(:category).default_order.page(params[:page]).per(10)
   end
 
   def drafts
-    @posts = current_user.posts.drafts.includes(:category).default_order.page(params[:page]).per(8)
+    @posts = current_user.posts.drafts.includes(:category).default_order.page(params[:page]).per(10)
   end
 
   private
