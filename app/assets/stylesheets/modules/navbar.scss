@@ -33,6 +33,7 @@
       a {
         font-size: 20px;
         color: #777;
+        border-bottom: 1px solid #cdcdcd;
       }
     }
   }
@@ -91,7 +92,7 @@
         text-align: center;
         &-link {
           font-weight: bolder;
-          font-size: 57px;
+          font-size: 45px;
           line-height: 40px;
           margin-left: 57px;
           @media(max-width: 330px) {
