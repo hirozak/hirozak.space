@@ -6,7 +6,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.published.find_by(slug: params[:id])
-    @popular_posts = PopularPost.includes(post: :category).map(&:post)
+    @popular_posts = PopularPost.includes(post: :category).map(&:post).take(5)
     @similar_posts = @post.category.posts.published.where('id != ?', @post.id).default_order.limit(4)
   end
 end

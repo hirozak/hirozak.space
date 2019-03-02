@@ -40,13 +40,16 @@ namespace :analytics do
 
       slug = row.dimensions.first.to_s[7..-1]
       post = Post.find_by(slug: slug)
-      break if post.nil?
+      next if post.nil?
 
       num += 1
-      popular_post = PopularPost.find_by(rank: num)
+      popular_post = PopularPost.where(rank: num).first_or_create! do |new_popular_post|
+        new_popular_post.rank = num
+        new_popular_post.post = post
+      end
       popular_post.update!(post_id: post.id)
       puts "#{num}: #{row.metrics.first.values.first}views: #{post.title}"
-      break if num == 5
+      break if num == 8
     end
   end
 end
