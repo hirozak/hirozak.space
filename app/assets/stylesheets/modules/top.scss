@@ -11,6 +11,7 @@
     }
     &_image {
       height: 150px;
+      border-radius: 4px;
     }
     &_title {
       margin-top: 5px;
@@ -88,7 +89,8 @@
       padding: 25px 10px;
       display: flex;
       text-decoration :none;
-      box-shadow: 0px 1px 6px rgba(0,0,0,0.4);
+      border-radius: 5px;
+      box-shadow: 0px 1px 3px rgba(0,0,0,0.4);
       transition: .3s;
       &:hover {
         -webkit-transform: scale(1.05);
@@ -101,6 +103,7 @@
       &--image {
         &__item {
           max-width: 100%;
+          border-radius: 4px;
           @include hover();
         }
       }
@@ -192,6 +195,7 @@
       &--item {
         max-width: 100%;
         max-height: 210px;
+        border-radius: 4px;
       }
     }
     &-info {
@@ -316,6 +320,7 @@
         @include active_image();
         &__item {
           width: 100%;
+          border-radius: 4px;
         }
       }
       &--main {
@@ -408,6 +413,7 @@
       padding-right: 5px;
       &--item {
         width: 100%;
+        border-radius: 4px;
       }
     }
     &-info {
