@@ -50,7 +50,7 @@
     .top-title-link {
       margin-left: 40%;
       font-weight: bold;
-      font-size: 50px;
+      font-size: 40px;
       padding: 30px;
       height: 80px;
       float: left;
@@ -92,12 +92,9 @@
         text-align: center;
         &-link {
           font-weight: bolder;
-          font-size: 45px;
+          font-size: 35px;
           line-height: 40px;
           margin-left: 57px;
-          @media(max-width: 330px) {
-            font-size: 47px;
-          }
         }
       }
     }

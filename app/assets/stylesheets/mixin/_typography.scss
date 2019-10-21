@@ -1,7 +1,31 @@
+@font-face {
+  font-family: "NotoSansJP";
+  font-style: normal;
+  font-weight: normal;
+  src: url('NotoSansCJKjp-Regular') format('truetype');
+  font-display: block;
+}
+
+@font-face {
+  font-family: "NotoSansJP";
+  font-style: normal;
+  font-weight: 500;
+  src: url('NotoSansCJKjp-Medium') format('truetype');
+  font-display: block;
+}
+
+@font-face {
+  font-family: "NotoSansJP";
+  font-style: normal;
+  font-weight: bold;
+  src: url('NotoSansCJKjp-Bold') format('truetype');
+  font-display: block;
+}
+
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, .navbar, .brand, a, .td-name, td, button, input, select, textarea {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: "Montserrat", "Helvetica", Arial, sans-serif;
+  font-family: "NotoSansJP", "Montserrat", "Helvetica", Arial, sans-serif;
   font-weight: 300;
 }
 
@@ -43,21 +67,25 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, p, .navbar, .brand, a, .td
 
   h1, .h1 {
     font-size: 3.6em;
+    font-weight: bold;
   }
 
   h2, .h2 {
     font-size: 2.5em;
+    font-weight: bold;
   }
 
   h3, .h3 {
     font-size: 1.825em;
     line-height: 1.4;
     margin: 20px 0 0px;
+    font-weight: 500;
   }
 
   h4, .h4 {
     font-size: 1.6em;
     line-height: 1.2em;
+    font-weight: 500;
   }
 
   h5, .h5 {

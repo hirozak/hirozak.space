@@ -1,24 +1,8 @@
 // setup
 @import "./reset";
-@import "./mixin/typography";
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
-@import 'slick';
-@import 'slick-theme';
 @import "dropzone/dropzone";
-@import "./mixin/clearfix";
-@import "./mixin/hover_active";
-
-// styles
-@import "./mixin/button";
-@import "./modules/navbar";
-@import "./modules/footer";
-@import "./modules/top";
-@import "./modules/admin";
-@import "./modules/user_form";
-@import "./modules/post";
-@import "./modules/tags";
-@import "./modules/about";
-@import "./modules/error";
-@import "./mixin/blogcard"
+@import "./mixin/*";
+@import "./modules/*";

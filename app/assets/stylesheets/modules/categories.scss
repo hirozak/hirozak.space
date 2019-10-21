@@ -1,25 +1,35 @@
-.tags {
+.categories {
   margin-bottom: 50px;
-  @media(max-widh: 767px) {
+  @media(max-width: 767px) {
+    padding-bottom: 30px;
     border-bottom: 0.5px solid #cdcdcd;
 
     .main-title {
       margin-bottom: 20px;
     }
   }
-  .tag-list {
-    text-align: center;
-    .tag {
+  .category-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    .category {
       display: inline-block;
-      margin: 12px 3px;
+      width: 28%;
+      margin: 20px 0;
+      @media(max-width: 767px) {
+        width: 48%;
+      }
       a {
-        font-size: 18px;
+        width: 100%;
+        font-size: 22px;
         font-weight: bold;
         color: #777;
         display: inline-block;
-        padding: 3px 16px;
+        padding: 5px 36px;
         background-color: #eee;
         border-radius: 20px;
+        text-align: center;
         &:hover {
           text-decoration: none;
           background-color: #ddd;

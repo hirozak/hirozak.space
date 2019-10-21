@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   root 'top#index'
   resources :posts, only: %i[index show]
-  resources :categories, only: %i[show]
+  resources :categories, only: %i[index show]
   resources :tags, only: %i[index show]
   resources :about, only: %i[index]
 

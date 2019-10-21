@@ -2,19 +2,16 @@
   <%= render 'shared/navbar' %>
   <%= render 'shared/header_image' %>
   <%= render 'shared/header_menu' %>
-  <%= render 'posts/slider', posts: @slider_posts %>
 </header>
-<div class="main-wrapper">
-  <div class="container-fluid main-container">
-    <div class="posts-wrapper">
-      <div class="posts">
-        <h2 class="main-title"><%= main_title %></h2>
-        <div class="posts-wrapper">
-          <%= render @posts %>
-        </div>
-        <div class="posts-pagination">
-          <%= paginate @posts %>
-        </div>
+<div class="container-fluid main-container">
+  <div class="posts-wrapper">
+    <div class="posts">
+      <h2 class="main-title"><%= main_title %></h2>
+      <div class="posts-wrapper">
+        <%= render @posts %>
+      </div>
+      <div class="posts-pagination">
+        <%= paginate @posts %>
       </div>
     </div>
   </div>

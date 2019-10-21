@@ -1,4 +1,4 @@
-<% set_meta_tags title: "Tags", og: { title: "Tags", type: 'website' }, twitter: { title: "Tags" } %>
+<% set_meta_tags title: "Categories", og: { title: "Categories", type: 'website' }, twitter: { title: "Categories" } %>
 <header>
   <%= render 'shared/navbar' %>
   <%= render 'shared/header_image' %>
@@ -6,10 +6,10 @@
 </header>
 <div class="container-fluid main-container">
   <div class="row posts-wrapper">
-    <div class="tags col-md-6 col-md-offset-3">
-      <h2 class="main-title">Tags</h2>
-      <div class="tag-list">
-        <%= render partial: 'tag', collection: @tags %>
+    <div class="categories col-md-6 col-md-offset-3">
+      <h2 class="main-title">Categories</h2>
+      <div class="category-list">
+        <%= render @categories %>
       </div>
     </div>
   </div>

@@ -16,8 +16,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right navbar-links">
-        <li><a href="#" class="navbar-link" data-toggle="modal" data-target="#categoriesModal">Categories</a>
-        </li>
+        <li><%= link_to 'Categories', categories_path, class: "navbar-link" %></li>
         <li><%= link_to 'Tags', tags_path, class: "navbar-link" %></li>
         <% if user_signed_in? %>
           <li class="dropdown">
@@ -30,27 +29,5 @@
         <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->
-    <!-- Modal -->
-    <div class="modal fade" id="categoriesModal" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h3 class="modal-title" id="categoriesModalLabel">Categories</h3>
-          </div>
-          <div class="modal-body category-list-modal">
-            <div class="row">
-              <% Category.all.each do |category| %>
-                <div class="col-md-4 col-xs-4 caterogry-list-modal_item">
-                  <%= link_to category.name, category %>
-                </div>
-              <% end %>
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-outline-default btn-round" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
   </div><!-- /.container-fluid -->
 </nav>
