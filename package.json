@@ -1,17 +1,32 @@
 {
-  "name": "mysetup_rails",
+  "name": "hirozak",
+  "scripts": {
+    "lint": "yarn run tslint app/javascript/**/*.{ts,tsx} app/javascript/**/**/*.{ts,tsx}",
+    "prettier": "yarn run tslint app/javascript/**/*.{ts,tsx} app/javascript/**/**/*.{ts,tsx}  --fix"
+  },
   "private": true,
   "dependencies": {
     "@babel/preset-react": "^7.6.3",
+    "@rails/actioncable": "^6.0.0",
+    "@rails/actiontext": "^6.0.0",
+    "@rails/activestorage": "^6.0.0",
+    "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "^4.0.7",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
     "prop-types": "^15.7.2",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
+    "trix": "^1.2.1",
     "ts-loader": "^6.2.0",
+    "turbolinks": "^5.2.0",
     "typescript": "^3.6.4"
   },
   "devDependencies": {
+    "prettier": "^1.16.4",
+    "tslint": "^5.14.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.0.1",
+    "tslint-react": "^3.6.0",
     "webpack-dev-server": "^3.8.2"
   }
 }

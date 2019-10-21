@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).on('turbolinks:load', function(){
   var $slider = $('.post-slider');
   $slider.slick({
     arrows: false,
