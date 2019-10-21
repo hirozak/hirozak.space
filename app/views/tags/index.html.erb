@@ -3,20 +3,7 @@
   <%= render 'shared/navbar' %>
   <%= render 'shared/header_image' %>
   <%= render 'shared/header_menu' %>
-  <div class="container-fluid slider-container">
-    <div class="post-slider">
-      <% @slider_posts.each do |slide_post| %>
-      <div class="post-slider--item">
-        <%= link_to slide_post do %>
-          <%= image_tag slide_post.image.url(:thumb), class:"post-slider--item_image" %>
-          <div class="post-slider--item_title">
-            <%= slide_post.title %>
-          </div>
-        <% end %>
-      </div>
-      <% end %>
-    </div>
-  </div>
+  <%= render 'posts/slider', posts: @slider_posts %>
 </header>
 <div class="main-wrapper">
   <div class="container-fluid main-container">

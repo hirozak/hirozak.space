@@ -1,4 +1,7 @@
-$(document).on('turbolinks:load', function(){
+import 'slick-carousel';
+import $ from 'jquery';
+
+$(function(){
   var $slider = $('.post-slider');
   $slider.slick({
     arrows: false,

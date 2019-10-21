@@ -1,0 +1,15 @@
+<%= javascript_pack_tag 'post_slider', 'data-turbolinks-track': 'reload' %>
+<div class="container-fluid slider-container">
+    <div class="post-slider">
+      <% posts.each do |slide_post| %>
+        <div class="post-slider--item">
+          <%= link_to slide_post do %>
+            <%= image_tag slide_post.image.url(:thumb), class:"post-slider--item_image" %>
+            <div class="post-slider--item_title">
+              <%= slide_post.title %>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
