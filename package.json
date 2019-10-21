@@ -1,5 +1,17 @@
 {
   "name": "mysetup_rails",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "@babel/preset-react": "^7.6.3",
+    "@rails/webpacker": "^4.0.7",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
+    "prop-types": "^15.7.2",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "ts-loader": "^6.2.0",
+    "typescript": "^3.6.4"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^3.8.2"
+  }
 }
